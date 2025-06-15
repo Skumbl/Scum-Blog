@@ -18,6 +18,7 @@ export async function getAllPosts(): Promise<PostData[]> {
 		});
 	}
 
+	//sort from newest to oldest
 	return posts.sort(
 		(a: PostData,b: PostData): number  => new Date(b.date).getTime() - new Date(a.date).getTime()
 	)

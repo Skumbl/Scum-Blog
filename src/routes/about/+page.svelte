@@ -7,14 +7,13 @@
 		<About />
 </section>
 
-
 <style>
-	.container {
-		max-width: 50%;
-		margin: 0 auto;
-		padding: 0 1rem;
-		text-align: left;
-	}
+    .container {
+        max-width: min(600px, 90vw); /* 600px max, but 90% of viewport on small screens */
+        margin: 0 auto;
+        padding: 0 1rem;
+        text-align: left;
+    }
 	img	{
 			margin-top: 2rem;
       outline: 2px solid #000;

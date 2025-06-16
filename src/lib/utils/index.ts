@@ -1,8 +1,9 @@
 import type { MarkdownModule, PostData } from '$lib/types/post';
 
-export async function getAllPosts(): Promise<PostData[]> {
+// private function to get all posts
+async function fetchAllPosts(): Promise<PostData[]> {
 	const modules = import.meta.glob<MarkdownModule>(
-		'$lib/assets/posts/*.md',
+		'$lib/assets/allPosts/*.md',
 		{ eager: true }
 	);
 
@@ -17,9 +18,28 @@ export async function getAllPosts(): Promise<PostData[]> {
 			Content: module.default
 		});
 	}
+	return posts;
+}
 
-	//sort from newest to oldest
+export async function getAllPosts(): Promise<PostData[]> {
+	const posts: PostData[] = await fetchAllPosts();
+
 	return posts.sort(
-		(a: PostData,b: PostData): number  => new Date(b.date).getTime() - new Date(a.date).getTime()
-	)
+		(a: PostData, b: PostData): number =>
+			new Date(b.date).getTime() - new Date(a.date).getTime()
+	);
+}
+
+export async function getLatestPost(): Promise<PostData | null> {
+	const posts: PostData[] = await fetchAllPosts();
+
+	if (posts.length === 0) {
+		return null;
+	}
+
+	return posts.reduce((latest: PostData, current: PostData): PostData =>
+		new Date(current.date).getTime() > new Date(latest.date).getTime()
+			? current
+			: latest
+	);
 }

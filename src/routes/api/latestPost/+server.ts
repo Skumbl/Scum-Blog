@@ -1,18 +1,17 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
-import { getAllPosts } from '$lib/utils';
+import { getLatestPost } from '$lib/utils';
 import type { PostData } from '$lib/types/post';
 
 export const GET: RequestHandler = async () => {
 	try {
-		const posts: PostData[]  = await getAllPosts();
-
-		return json(posts);
+		const latestPost: PostData | null = await getLatestPost()
+		return json(latestPost)
 	} catch (err) {
-		console.error('Failed to fetch posts:', err);
+		console.error('Failed to fetch latestPost:', err);
 		return json(
-			{ error: 'Failed to fetch posts' },
+			{ error: 'Failed to fetch latest post' },
 			{ status: 500 }
 		);
 	}
-};
+}

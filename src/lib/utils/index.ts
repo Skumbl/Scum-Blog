@@ -3,17 +3,16 @@ import type { MarkdownModule, PostData } from '$lib/types/post';
 // private function to get all posts
 async function fetchAllPosts(): Promise<PostData[]> {
 	const modules = import.meta.glob<MarkdownModule>(
-		'$lib/assets/allPosts/*.md',
+		'$lib/assets/posts/*.md',
 		{ eager: true }
 	);
 
 	const posts: PostData[] = [];
 
 	for (const [path, module] of Object.entries(modules)) {
-		const slug = path.split('/').pop()?.replace('.md', '') ?? '';
-
+		const fileName = path.split('/').pop()?.replace('.md', '') ?? '';
 		posts.push({
-			postId: slug,
+			slug: fileName,
 			...module.metadata,
 			Content: module.default
 		});

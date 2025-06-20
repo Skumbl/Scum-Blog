@@ -36,9 +36,7 @@ export async function getLatestPost(): Promise<PostData | null> {
 		return null;
 	}
 
-	return posts.reduce((latest: PostData, current: PostData): PostData =>
-		new Date(current.date).getTime() > new Date(latest.date).getTime()
-			? current
-			: latest
-	);
+	return posts.sort(
+		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+	)[0];
 }

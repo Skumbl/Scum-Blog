@@ -34,6 +34,11 @@
 
         outline: 2px solid #000;
         outline-offset: -2px;
+        box-shadow: 10px 10px var(--black);
+        transition: box-shadow 0.5s ease-out;
+    }
+    header:hover {
+        box-shadow: none;
     }
 
     ul {
@@ -42,9 +47,15 @@
         display: flex;
         gap: 1rem;
     }
-
     a {
-        text-decoration: none;
         color: inherit;
+        text-decoration: none;
+        transition: color 0.2s ease;
     }
+
+
+		a:hover {
+				color: var(--pastelRed);
+
+		}
 </style>

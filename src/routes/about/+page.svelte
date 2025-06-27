@@ -18,5 +18,7 @@
 			margin-top: 2rem;
       outline: 2px solid #000;
       outline-offset: -2px;
+      box-shadow: 10px 10px var(--black);
+      transition: box-shadow 0.5s ease-out;
 	}
 </style>

@@ -26,9 +26,56 @@ body {
 }
 html {
   font-family: 'IBM Plex Mono', monospace;
+  min-width: 500px;
 }
 
 a {
   text-decoration: none;
   color: var(--pastelBlue);
+}
+
+/*Post Styling*/
+.headerImage {
+  max-width: min(60rem, 90vw);
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  outline: 2px solid #000;
+  outline-offset: -2px;
+  box-shadow: 10px 10px var(--black);
+  transition: box-shadow 0.5s ease-out;
+}
+.headerImage:hover {
+  box-shadow:none;
+}
+.title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--black, #000);
+}
+.date {
+  background: var(--black, #000);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+.tags {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.tag {
+  background: var(--pastelYellow);
+  border: 2px solid var(--black, #000);
+  padding: 0.25rem 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: background 0.2s ease-out;
+}
+.tag:hover {
+  background: var(--pastelRed);
 }

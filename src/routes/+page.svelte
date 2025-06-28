@@ -35,8 +35,7 @@
 
 <style>
     .front-blurb {
-        width: min(30%, 600px);
-        min-width: 300px;
+        max-width: min(30rem, 90vw);
         margin: 0 auto;
 				padding: 2rem;
         text-align: left;

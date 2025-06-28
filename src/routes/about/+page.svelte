@@ -8,17 +8,20 @@
 </section>
 
 <style>
-    .container {
-        max-width: min(600px, 90vw); /* 600px max, but 90% of viewport on small screens */
+		.container {
+        max-width: min(50rem, 90vw);
         margin: 0 auto;
         padding: 0 1rem;
         text-align: left;
     }
-	img	{
+		img	{
 			margin-top: 2rem;
       outline: 2px solid #000;
       outline-offset: -2px;
       box-shadow: 10px 10px var(--black);
       transition: box-shadow 0.5s ease-out;
+	}
+		img:hover{
+			box-shadow: none;
 	}
 </style>

@@ -14,3 +14,7 @@
 {:else}
 	<p>No posts available.</p>
 {/if}
+
+<style>
+	
+</style>

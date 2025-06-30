@@ -24,6 +24,7 @@
 </div>
 
 <div class="front-blurb">
+	<h1 class="error-text">Site Under Construction</h1>
 	<h2><i>a blog written by and for bad developers</i></h2>
 	<p><strong><u>Latest Blog Post:</u></strong></p>
 	{#if error}

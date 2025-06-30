@@ -1,5 +1,5 @@
 <script>
-	import '$lib/styles/style.css'
+	import '$lib/styles/style.css';
 </script>
 <header>
 	<a href="/">

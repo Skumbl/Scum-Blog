@@ -18,9 +18,6 @@ Lorem ipsum dolor sit amet, consectetur a   dipiscing elit. Vestibulum facilisis
 
 **BOLD LOREM**
 
-- [ ] testing checkbox styling 
-- [X] testing checkbox styling
-
 ```typescript
 let foo: string = "bar";
 ```

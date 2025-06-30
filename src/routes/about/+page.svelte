@@ -3,8 +3,10 @@
 </script>
 
 <section class="container">
-	<img src="/gifs/triangle-moving.gif" alt="super pfp">
+	<div class="content">
+		<img src="/gifs/triangle-moving.gif" alt="super pfp">
 		<About />
+	</div>
 </section>
 
 <style>

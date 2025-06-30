@@ -11,3 +11,8 @@ and learn some new frameworks.
 
 Do I like the JavaScript ecosystem? Not really. But I love to learn, so here we are.
 I am also the number-one boilerplate enjoyer—so what do I know.
+
+# PC Specs
+                                                                  
+                                                                  
+

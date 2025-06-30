@@ -34,6 +34,7 @@
 	<div class="content">
 		<Content />
 	</div>
+	<div class = "spacer"></div>
 </article>
 
 <style>
@@ -43,4 +44,7 @@
         padding: 0 1rem;
         text-align: left;
     }
+		.spacer {
+				padding-top: 2rem;
+		}
 </style>

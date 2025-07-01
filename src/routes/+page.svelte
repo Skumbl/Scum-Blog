@@ -2,93 +2,291 @@
 	export let data;
 	const { post, error } = data;
 
-	// stupid spinning logo logic
+	// Enhanced spinning logo logic
 	let logoClicked = false;
+	let spinCount = 0;
 
 	function handleLogoClick() {
 		logoClicked = true;
-
+		spinCount++;
 		setTimeout(() => {
 			logoClicked = false;
 		}, 1000);
 	}
 </script>
 
-<div class="image-wrapper">
-	<button class:clicked={logoClicked} on:click={handleLogoClick}>
-	<img
-		src="/gifs/Scum_Blog.gif"
-		alt="Scum Blog Banner"
-	>
-	</button>
-</div>
+<div class="hero-section">
+	<div class="image-wrapper">
+		<button
+			class:clicked={logoClicked}
+			on:click={handleLogoClick}
+			aria-label="Spin the logo (clicked {spinCount} times)"
+		>
+			<img
+				src="/gifs/Scum_Blog.gif"
+				alt="Scum Blog Banner"
+			>
+		</button>
+		{#if spinCount > 0}
+			<p class="spin-counter">Spins: {spinCount}</p>
+		{/if}
+	</div>
 
-<div class="front-blurb">
-	<h1 class="error-text">Site Under Construction</h1>
-	<h2><i>a blog written by and for bad developers</i></h2>
-	<p><strong><u>Latest Blog Post:</u></strong></p>
-	{#if error}
-		<p class="error-text">ERROR: shidiot broke his website</p>
-	{:else if post}
-		<h2><a href="/blog/{post.slug}">{post.title}</a></h2>
-	{/if}
+	<div class="front-blurb">
+		<div class="status-bar">
+			<span class="status-indicator"></span>
+			<h1 class="error-text">Site Under Construction</h1>
+		</div>
+
+		<h2 class="tagline">
+			<i>a blog written by and for bad developers</i>
+		</h2>
+
+		<div class="latest-post-section">
+			<div class="section-header">
+				<span class="bracket">[</span>
+				<strong>Latest Blog Post</strong>
+				<span class="bracket">]</span>
+			</div>
+
+			{#if error}
+				<div class="error-box">
+					<p class="error-text">ERROR: shidiot broke his website</p>
+					<p class="error-code">HTTP 500 - OOPS</p>
+				</div>
+			{:else if post}
+				<div class="post-preview">
+					<h3><a href="/blog/{post.slug}" class="post-link">{post.title}</a></h3>
+					<div class="post-meta">
+						<span class="date">{post.date}</span>
+						{#if post.categories}
+							{#each post.categories.slice(0, 2) as category (category)}
+								<span class="tag">{category}</span>
+							{/each}
+						{/if}
+					</div>
+				</div>
+			{/if}
+		</div>
+
+		<div class="cta-section">
+			<a href="/blog" class="cta-button">View All Posts</a>
+			<a href="/about" class="cta-button secondary">About This Mess</a>
+		</div>
+	</div>
 </div>
 
 <style>
-    .front-blurb {
-        max-width: min(30rem, 90vw);
-        margin: 0 auto 17% auto;
-				padding: 2rem;
-        text-align: left;
-        outline: 2px solid #000;
-        outline-offset: -2px;
-        box-shadow: 10px 10px var(--black);
-        transition: box-shadow 0.5s ease-out;
+    .hero-section {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
     }
-
-    .front-blurb h2 {
-        margin: 0;
-        padding: 0;
-    }
-
-    .front-blurb:hover {
-        box-shadow: none;
-    }
-
-		.error-text {
-				color: darkred;
-		}
 
     .image-wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 8rem;
-        padding-bottom: 8rem;
+        padding-bottom: 4rem;
+        position: relative;
     }
 
     .image-wrapper button {
         cursor: pointer;
         transition: transform 0.3s ease;
-				border: none;
+        border: 2px solid transparent; /* Match your global border width */
         background: none;
-        padding: 0;
+        padding: 0.5rem;
+        position: relative;
     }
 
-		img {
-				scale: 1.5;
-		}
-
-    .image-wrapper button:hover {
-        transform: scale(1.05);
+    img {
+        scale: 1.5;
+        display: block;
     }
 
-		.image-wrapper button.clicked {
-			animation: spin 1s ease-in-out;
-		}
+    .image-wrapper button.clicked {
+        animation: spin 1s ease-in-out;
+    }
 
-		@keyframes spin {
-			from { transform: rotate(0deg); }
-			to { transform: rotate(360deg); }
-		}
+    .spin-counter {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: var(--pastelBlue);
+        font-weight: bold;
+    }
+
+    .front-blurb {
+        max-width: min(40rem, 90vw);
+        margin: 0 auto;
+        padding: 2.5rem;
+        text-align: left;
+        outline: 2px solid var(--black); /* Match headerImage style */
+        outline-offset: -2px;
+        box-shadow: 10px 10px var(--black); /* Match global shadow */
+        background: var(--offWhite);
+        transition: box-shadow 0.5s ease-out; /* Match global transition */
+    }
+
+    .front-blurb:hover {
+        box-shadow: none; /* Match global hover behavior */
+    }
+
+    .status-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--black);
+    }
+
+    .status-indicator {
+        width: 12px;
+        height: 12px;
+        background: red;
+        border-radius: 50%;
+        animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0.3; }
+    }
+
+    .error-text {
+        color: darkred;
+        margin: 0;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .tagline {
+        margin: 0 0 2rem 0;
+        color: var(--pastelBlue);
+        font-size: 1.1rem;
+    }
+
+    .latest-post-section {
+        margin-bottom: 2rem;
+    }
+
+    .section-header {
+        margin-bottom: 1rem;
+        font-family: var(--font-mono); /* Use your global font variable */
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .bracket {
+        color: var(--pastelRed);
+        font-weight: 900;
+    }
+
+    .error-box {
+        background: #ffe6e6;
+        border: 2px solid darkred; /* Match global border width */
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .error-code {
+        font-family: var(--font-mono); /* Use global font variable */
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0.5rem 0 0 0;
+    }
+
+    .post-preview {
+        border: 2px solid var(--black);
+        padding: 1.5rem;
+        background: white;
+    }
+
+    .post-link {
+        color: var(--black);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        display: block;
+        margin-bottom: 1rem;
+        transition: color 0.2s ease;
+    }
+
+    .post-link:hover {
+        color: var(--pastelRed);
+        text-decoration: underline;
+    }
+
+    .post-meta {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .cta-section {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .cta-button {
+        background: var(--black);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        border: 2px solid var(--black); /* Match global border */
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+
+    .cta-button:hover {
+        background: white;
+        color: var(--black);
+        box-shadow: 10px 10px 0 var(--black); /* Match global shadow */
+        transform: translate(-5px, -5px); /* Adjust for shadow */
+    }
+
+    .cta-button.secondary {
+        background: transparent;
+        color: var(--black);
+    }
+
+    .cta-button.secondary:hover {
+        background: var(--pastelYellow);
+    }
+
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .hero-section {
+            min-height: 70vh;
+            padding: 1rem;
+        }
+
+        .front-blurb {
+            padding: 2rem;
+        }
+
+        .cta-section {
+            flex-direction: column;
+        }
+
+        .post-meta {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+    }
 </style>

@@ -2,85 +2,174 @@
 	import '$lib/styles/style.css';
 </script>
 <header>
-	<a href="/">
-		<img src="/gifs/cd.gif" alt="Home" class="nav-gif" />
-		Home
-	</a>
-	<nav>
+	<div class="logo-section">
+		<a href="/" class="home-link">
+			<img src="/gifs/cd.gif" alt="Home" class="nav-gif" />
+			<span class="home-text">SCUM BLOG</span>
+		</a>
+	</div>
+
+	<nav class="main-nav">
 		<ul>
 			<li>
-				<a href="/about">
+				<a href="/about" class="nav-button">
 					<img src="/gifs/wizard.gif" alt="About" class="nav-gif" />
-					About
+					<span>About</span>
 				</a>
 			</li>
 			<li>
-				<a href="/blog">
+				<a href="/blog" class="nav-button">
 					<img src="/gifs/floppy_disk.gif" alt="Blog" class="nav-gif" />
-					Blog
+					<span>Blog</span>
 				</a>
 			</li>
 			<li>
-				<a href="/contact">
+				<a href="/contact" class="nav-button">
 					<img src="/gifs/email.gif" alt="Contact" class="nav-gif" />
-					Contact
+					<span>Contact</span>
 				</a>
 			</li>
 <!--			<li>-->
-<!--				<button>-->
+<!--				<button class="nav-button theme-toggle">-->
 <!--					<img src="/gifs/darkmode-icon.gif" alt="Dark Mode" class="nav-gif" />-->
-<!--					Dark Mode Toggle-->
+<!--					<span>Toggle</span>-->
 <!--				</button>-->
 <!--			</li>-->
 		</ul>
 	</nav>
 </header>
+
 <style>
     header {
-        padding: 1rem;
+        padding: 1.5rem 2rem;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
         background: var(--pastelBlue);
-        color: var(--pastelYellow);
-        outline: 2px solid #000;
-        outline-offset: -2px;
-        box-shadow: 10px 10px var(--black);
-        transition: box-shadow 0.5s ease-out;
+        color: var(--offWhite);
+        border: 4px solid var(--black);
+        box-shadow: 8px 8px 0 var(--black);
+        transition: box-shadow 0.3s ease;
     }
+
     header:hover {
-        box-shadow: none;
+        box-shadow: 4px 4px 0 var(--black);
+        transform: translate(2px, 2px);
     }
-    ul {
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .home-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--offWhite);
+        text-decoration: none;
+        padding: 0.75rem 1rem;
+        border: 3px solid var(--black);
+        background: var(--pastelRed);
+        color: var(--black);
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.2s ease;
+    }
+
+    .home-link:hover {
+        background: var(--pastelYellow);
+        box-shadow: 4px 4px 0 var(--black);
+        transform: translate(-2px, -2px);
+    }
+
+    .home-text {
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+
+    .main-nav ul {
         margin: 0;
+        padding: 0;
         list-style-type: none;
         display: flex;
-        gap: 1rem;
+        gap: 0.75rem;
     }
-    a, button {
-        color: inherit;
-        text-decoration: none;
-        transition: color 0.2s ease;
+
+    .nav-button {
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        background: none;
-        border: none;
+        padding: 0.75rem 1rem;
+        color: var(--black);
+        text-decoration: none;
+        border: 3px solid var(--black);
+        background: var(--pastelYellow);
         font: inherit;
         cursor: pointer;
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.3px;
     }
-    a:hover, button:hover {
-        color: var(--pastelRed);
+
+    .nav-button:hover {
+        background: var(--pastelRed);
+        box-shadow: 4px 4px 0 var(--black);
+        transform: translate(-2px, -2px);
     }
+
     .nav-gif {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         object-fit: contain;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        opacity: 0.8;
+        transition: all 0.3s ease;
     }
-    a:hover .nav-gif,
-    button:hover .nav-gif {
+
+    .nav-button:hover .nav-gif,
+    .home-link:hover .nav-gif {
         opacity: 1;
+        transform: scale(1.1);
+    }
+
+    .home-link .nav-gif {
+        opacity: 1;
+        animation: spin-slow 8s linear infinite;
+    }
+
+    .home-link:hover .nav-gif {
+        animation: spin-fast 0.5s linear infinite;
+    }
+
+    @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    @keyframes spin-fast {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .main-nav ul {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-button {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+        }
     }
 </style>

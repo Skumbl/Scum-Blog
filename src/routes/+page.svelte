@@ -52,7 +52,7 @@
 			{#if error}
 				<div class="error-box">
 					<p class="error-text">ERROR: shidiot broke his website</p>
-					<p class="error-code">HTTP 500 - OOPS</p>
+					<p class="error-code">HTTP 500</p>
 				</div>
 			{:else if post}
 				<div class="post-preview">
@@ -61,6 +61,7 @@
 						<span class="date">{post.date}</span>
 						{#if post.categories}
 							{#each post.categories.slice(0, 2) as category (category)}
+								<!--TODO: make these <a> tags to that category-->
 								<span class="tag">{category}</span>
 							{/each}
 						{/if}
@@ -85,7 +86,6 @@
         align-items: center;
         padding: 2rem 1rem;
     }
-
     .image-wrapper {
         display: flex;
         flex-direction: column;
@@ -94,7 +94,6 @@
         padding-bottom: 4rem;
         position: relative;
     }
-
     .image-wrapper button {
         cursor: pointer;
         transition: transform 0.3s ease;
@@ -103,26 +102,22 @@
         padding: 0.5rem;
         position: relative;
     }
-
     img {
         scale: 1.5;
         display: block;
     }
-
     .image-wrapper button.clicked {
         animation: spin 1s ease-in-out;
     }
-
     .spin-counter {
         margin-top: 1rem;
         font-size: 0.9rem;
         color: var(--pastelBlue);
         font-weight: bold;
     }
-
     .front-blurb {
         max-width: min(40rem, 90vw);
-        margin: 0 auto;
+        margin: 2rem auto;
         padding: 2.5rem;
         text-align: left;
         outline: 2px solid var(--black); /* Match headerImage style */
@@ -131,11 +126,9 @@
         background: var(--offWhite);
         transition: box-shadow 0.5s ease-out; /* Match global transition */
     }
-
     .front-blurb:hover {
         box-shadow: none; /* Match global hover behavior */
     }
-
     .status-bar {
         display: flex;
         align-items: center;
@@ -144,7 +137,6 @@
         padding-bottom: 1rem;
         border-bottom: 2px solid var(--black);
     }
-
     .status-indicator {
         width: 12px;
         height: 12px;
@@ -152,89 +144,74 @@
         border-radius: 50%;
         animation: blink 2s infinite;
     }
-
     @keyframes blink {
         0%, 50% { opacity: 1; }
         51%, 100% { opacity: 0.3; }
     }
-
     .error-text {
         color: darkred;
         margin: 0;
         font-weight: 900;
         text-transform: uppercase;
     }
-
     .tagline {
         margin: 0 0 2rem 0;
         color: var(--pastelBlue);
         font-size: 1.1rem;
     }
-
     .latest-post-section {
         margin-bottom: 2rem;
     }
-
     .section-header {
         margin-bottom: 1rem;
         font-family: var(--font-mono); /* Use your global font variable */
         font-weight: bold;
         text-transform: uppercase;
     }
-
     .bracket {
         color: var(--pastelRed);
         font-weight: 900;
     }
-
     .error-box {
         background: #ffe6e6;
         border: 2px solid darkred; /* Match global border width */
         padding: 1rem;
         margin: 1rem 0;
     }
-
     .error-code {
         font-family: var(--font-mono); /* Use global font variable */
         font-size: 0.9rem;
         color: #666;
         margin: 0.5rem 0 0 0;
     }
-
     .post-preview {
         border: 2px solid var(--black);
         padding: 1.5rem;
-        background: white;
     }
-
     .post-link {
         color: var(--black);
         text-decoration: none;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         display: block;
         margin-bottom: 1rem;
         transition: color 0.2s ease;
     }
-
     .post-link:hover {
         color: var(--pastelRed);
         text-decoration: underline;
     }
-
     .post-meta {
         display: flex;
         gap: 1rem;
         align-items: center;
         flex-wrap: wrap;
     }
-
     .cta-section {
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
     }
-
     .cta-button {
         background: var(--black);
         color: white;
@@ -246,30 +223,28 @@
         text-transform: uppercase;
         font-size: 0.9rem;
     }
-
     .cta-button:hover {
         background: white;
         color: var(--black);
         box-shadow: 10px 10px 0 var(--black); /* Match global shadow */
         transform: translate(-5px, -5px); /* Adjust for shadow */
     }
-
     .cta-button.secondary {
         background: transparent;
         color: var(--black);
     }
-
     .cta-button.secondary:hover {
         background: var(--pastelYellow);
     }
-
     @keyframes spin {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
     }
-
-    /* Mobile adjustments */
     @media (max-width: 768px) {
+				.image-wrapper {
+						padding-top: 4rem;
+				}
+
         .hero-section {
             min-height: 70vh;
             padding: 1rem;

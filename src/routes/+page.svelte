@@ -2,7 +2,6 @@
 	export let data;
 	const { post, error } = data;
 
-	// Enhanced spinning logo logic
 	let logoClicked = false;
 	let spinCount = 0;
 
@@ -97,7 +96,7 @@
     .image-wrapper button {
         cursor: pointer;
         transition: transform 0.3s ease;
-        border: 2px solid transparent; /* Match your global border width */
+        border: 2px solid transparent;
         background: none;
         padding: 0.5rem;
         position: relative;
@@ -120,14 +119,14 @@
         margin: 2rem auto;
         padding: 2.5rem;
         text-align: left;
-        outline: 2px solid var(--black); /* Match headerImage style */
+        outline: 2px solid var(--black);
         outline-offset: -2px;
-        box-shadow: 10px 10px var(--black); /* Match global shadow */
+        box-shadow: 10px 10px var(--black);
         background: var(--offWhite);
-        transition: box-shadow 0.5s ease-out; /* Match global transition */
+        transition: box-shadow 0.5s ease-out;
     }
     .front-blurb:hover {
-        box-shadow: none; /* Match global hover behavior */
+        box-shadow: none;
     }
     .status-bar {
         display: flex;
@@ -164,7 +163,7 @@
     }
     .section-header {
         margin-bottom: 1rem;
-        font-family: var(--font-mono); /* Use your global font variable */
+
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -174,12 +173,11 @@
     }
     .error-box {
         background: #ffe6e6;
-        border: 2px solid darkred; /* Match global border width */
+        border: 2px solid darkred;
         padding: 1rem;
         margin: 1rem 0;
     }
     .error-code {
-        font-family: var(--font-mono); /* Use global font variable */
         font-size: 0.9rem;
         color: #666;
         margin: 0.5rem 0 0 0;
@@ -218,7 +216,7 @@
         padding: 0.75rem 1.5rem;
         text-decoration: none;
         font-weight: bold;
-        border: 2px solid var(--black); /* Match global border */
+        border: 2px solid var(--black);
         transition: all 0.2s ease;
         text-transform: uppercase;
         font-size: 0.9rem;
@@ -226,8 +224,8 @@
     .cta-button:hover {
         background: white;
         color: var(--black);
-        box-shadow: 10px 10px 0 var(--black); /* Match global shadow */
-        transform: translate(-5px, -5px); /* Adjust for shadow */
+        box-shadow: 10px 10px 0 var(--black);
+        transform: translate(-5px, -5px);
     }
     .cta-button.secondary {
         background: transparent;

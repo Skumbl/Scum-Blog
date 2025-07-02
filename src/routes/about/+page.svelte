@@ -5,6 +5,7 @@
 <section class="container">
 	<div class="content">
 		<img src="/gifs/triangle-moving.gif" alt="super pfp">
+		<p>(that's a real picture of me)</p>
 		<About />
 	</div>
 </section>
@@ -24,6 +25,6 @@
       transition: box-shadow 0.5s ease-out;
 	}
 		img:hover{
-			box-shadow: none;
+		box-shadow: 4px 4px 0 var(--black);
 	}
 </style>

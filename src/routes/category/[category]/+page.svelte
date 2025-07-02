@@ -1,11 +1,13 @@
 <script lang="ts">
-	export let data: PageData;
-	const { posts, error } = data;
+	export let data;
+	const { posts, category, error } = data;
 </script>
 
 <div class="posts-container">
 	<header class="page-header">
-		<h1 class="page-title">Blog Posts</h1>
+		<h1 class="page-title">
+			<span class="page-title-tag">[{category}]</span> Posts
+		</h1>
 		<p class="post-count">{posts?.length || 0} posts found</p>
 	</header>
 
@@ -39,12 +41,23 @@
 	{:else}
 		<div class="empty-state">
 			<p class="empty-text">No posts available.</p>
-			<p class="empty-subtitle">gonna keep it a stack, I don't know what broke</p>
+			<p class="empty-subtitle">Check back later for some quality bad code!</p>
 		</div>
 	{/if}
 </div>
 
 <style>
+		.page-title-tag {
+        background: var(--pastelYellow);
+        border: 3px solid var(--black);
+        padding: 0.5rem 1rem;
+        box-shadow: 6px 6px 0 var(--black);
+        color: var(--black);
+        font-weight: 900;
+        transform: rotate(-2deg);
+        display: inline-block;
+		}
+
     .posts-container {
         max-width: min(60rem, 90vw);
         margin: 0 auto;
@@ -162,6 +175,7 @@
         font-style: italic;
     }
 
+    /* Mobile adjustments */
     @media (max-width: 768px) {
         .posts-grid {
             grid-template-columns: 1fr;

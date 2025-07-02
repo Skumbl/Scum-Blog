@@ -51,17 +51,14 @@
         box-shadow: 8px 8px 0 var(--black);
         transition: box-shadow 0.3s ease;
     }
-
     header:hover {
         box-shadow: 4px 4px 0 var(--black);
         transform: translate(2px, 2px);
     }
-
     .logo-section {
         display: flex;
         align-items: center;
     }
-
     .home-link {
         display: flex;
         align-items: center;
@@ -77,18 +74,15 @@
         letter-spacing: 0.5px;
         transition: all 0.2s ease;
     }
-
     .home-link:hover {
         background: var(--pastelYellow);
         box-shadow: 4px 4px 0 var(--black);
         transform: translate(-2px, -2px);
     }
-
     .home-text {
         font-size: 1.2rem;
         font-weight: 900;
     }
-
     .main-nav ul {
         margin: 0;
         padding: 0;
@@ -96,7 +90,6 @@
         display: flex;
         gap: 0.75rem;
     }
-
     .nav-button {
         display: flex;
         align-items: center;
@@ -114,13 +107,11 @@
         font-size: 0.9rem;
         letter-spacing: 0.3px;
     }
-
     .nav-button:hover {
         background: var(--pastelRed);
         box-shadow: 4px 4px 0 var(--black);
         transform: translate(-2px, -2px);
     }
-
     .nav-gif {
         width: 18px;
         height: 18px;
@@ -128,32 +119,26 @@
         opacity: 0.8;
         transition: all 0.3s ease;
     }
-
     .nav-button:hover .nav-gif,
     .home-link:hover .nav-gif {
         opacity: 1;
         transform: scale(1.1);
     }
-
     .home-link .nav-gif {
         opacity: 1;
         animation: spin-slow 8s linear infinite;
     }
-
     .home-link:hover .nav-gif {
         animation: spin-fast 0.5s linear infinite;
     }
-
     @keyframes spin-slow {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
     }
-
     @keyframes spin-fast {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
     }
-
     /* mobile */
     @media (max-width: 768px) {
         header {

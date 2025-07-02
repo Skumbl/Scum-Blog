@@ -34,7 +34,7 @@
 	<div class="front-blurb">
 		<div class="status-bar">
 			<span class="status-indicator"></span>
-			<h1 class="error-text">Site Under Construction</h1>
+			<h1 class="error-text">Perpetually 90% Complete</h1>
 		</div>
 
 		<h2 class="tagline">
@@ -56,15 +56,18 @@
 			{:else if post}
 				<div class="post-preview">
 					<h3><a href="/blog/{post.slug}" class="post-link">{post.title}</a></h3>
+
 					<div class="post-meta">
 						<span class="date">{post.date}</span>
-						{#if post.categories}
-							{#each post.categories.slice(0, 2) as category (category)}
-								<!--TODO: make these <a> tags to that category-->
-								<span class="tag">{category}</span>
-							{/each}
-						{/if}
+						<div class="tags-container">
+							{#if post.categories}
+								{#each post.categories as category (category)}
+									<a class="tag" href="/category/{category}">{category}</a>
+								{/each}
+							{/if}
+						</div>
 					</div>
+
 				</div>
 			{/if}
 		</div>
@@ -126,7 +129,7 @@
         transition: box-shadow 0.5s ease-out;
     }
     .front-blurb:hover {
-        box-shadow: none;
+        box-shadow: 4px 4px 0 var(--black);
     }
     .status-bar {
         display: flex;
@@ -158,6 +161,13 @@
         color: var(--pastelBlue);
         font-size: 1.1rem;
     }
+
+    .tags-container {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
     .latest-post-section {
         margin-bottom: 2rem;
     }
@@ -186,6 +196,10 @@
         border: 2px solid var(--black);
         padding: 1.5rem;
     }
+		.post-preview h3 {
+				padding: 0;
+				margin: 0;
+		}
     .post-link {
         color: var(--black);
         text-decoration: none;
@@ -201,9 +215,9 @@
     }
     .post-meta {
         display: flex;
+        flex-direction: column;
         gap: 1rem;
-        align-items: center;
-        flex-wrap: wrap;
+        align-items: flex-start;
     }
     .cta-section {
         display: flex;

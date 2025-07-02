@@ -20,7 +20,7 @@ I am also the number-one boilerplate enjoyer—so what do I know.
 
 ## Hardware
 ### <u>Display</u>
-**Monitor:** LS28AG700N  
+**Monitor:** 28" Odyssey G70A 4K UHD LED  
 **Resolution:** 3840x2160 @ 144 Hz
 
 ### <u>CPU</u>
@@ -39,7 +39,7 @@ I am also the number-one boilerplate enjoyer—so what do I know.
 **Microphone:** Audio-Technica ATR1500x
 
 ### <u>Audio</u>
-**Headphones:** Beyerdynamic DT770
+**Headphones:** Beyerdynamic DT770 (80 ohm)
 
 ## Desktop Environment
 ### <u>Environment</u>

@@ -40,3 +40,14 @@ export async function getLatestPost(): Promise<PostData | null> {
 		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 	)[0];
 }
+
+export async function getPostsByCategory(category: string): Promise<PostData[]> {
+	const allPosts: PostData[] = await fetchAllPosts();
+
+	const filteredPosts: PostData[] = allPosts.filter((post: PostData) =>
+		post?.categories?.includes(category)
+	);
+	return filteredPosts.sort(
+		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+	);
+}

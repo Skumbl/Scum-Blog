@@ -25,8 +25,7 @@
 		{#if categories && categories.length > 0}
 			<div class="tags">
 				{#each categories as category (category)}
-					<!--TODO - make these anchors with util to categories page-->
-					<span class="tag">{category}</span>
+					<a class="tag" href="/category/{category}">{category}</a>
 				{/each}
 			</div>
 		{/if}

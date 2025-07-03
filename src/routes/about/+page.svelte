@@ -255,7 +255,6 @@
     }
     .spec-card p {
         margin: 0.3rem 0;
-        font-family: var(--font-mono);
         font-size: 0.9rem;
     }
     @media (max-width: 768px) {

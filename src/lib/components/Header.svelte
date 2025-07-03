@@ -139,7 +139,6 @@
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
     }
-    /* mobile */
     @media (max-width: 768px) {
         header {
             flex-direction: column;

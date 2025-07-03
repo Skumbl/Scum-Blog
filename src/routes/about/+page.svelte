@@ -133,7 +133,6 @@
 		img:hover {
 				box-shadow: 4px 4px 0 var(--black);
 		}
-		/*Overwrite some of the main css style page*/
 		.title-block {
 				font-size: 3rem;
         margin: 0 0 1rem;
@@ -182,11 +181,11 @@
         padding: 0.5rem;
         border: 2px solid var(--black);
         box-shadow: 5px 5px var(--black);
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transform to transition */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         transform: rotate(2deg) skew(-2deg);
     }
     .boilerplate:hover {
-        transform: rotate(2deg) skew(-2deg) translate(-5px, -5px); /* Keep rotation/skew + add translate */
+        transform: rotate(2deg) skew(-2deg) translate(-5px, -5px);
 				box-shadow: 2px 2px var(--black);
     }
     .pc-spec {

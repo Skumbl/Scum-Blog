@@ -3,7 +3,7 @@
 </script>
 <footer>
 	<div class="footer-container">
-		<p class="footer-title">This website was made by a real life human [me ヾ(＾∇＾)] - [2025]</p>
+		<p class="footer-title">This website was made in sveltekit by me ヾ(＾∇＾)</p>
 
 		<div class="footer-columns">
 			<div class="left-column">

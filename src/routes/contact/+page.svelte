@@ -31,7 +31,7 @@
 		</div>
 	</section>
 
-	<section class="contact-form-section">
+	<section>
 		<div class="form-card">
 			<h2 class="form-title">[COMPOSE MESSAGE]</h2>
 
@@ -83,7 +83,7 @@
 		</div>
 	</section>
 
-	<section class="contact-methods">
+	<section>
 		<h2 class="methods-title">Other Ways to Reach Me</h2>
 
 		<div class="methods-grid">
@@ -174,7 +174,6 @@
     }
     .form-card:hover {
         box-shadow: 5px 5px 0 var(--black);
-        transform: translate(2.5px, 2.5px);
     }
     .form-title {
         font-size: 2rem;

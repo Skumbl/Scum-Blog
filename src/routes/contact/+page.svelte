@@ -166,7 +166,6 @@
         51%, 100% { opacity: 0.3; }
     }
     .form-card {
-        background: white;
         border: 4px solid var(--black);
         box-shadow: 10px 10px 0 var(--black);
         padding: 3rem;
@@ -204,7 +203,6 @@
         padding: 1rem;
         border: 3px solid var(--black);
         background: var(--offWhite);
-        font-family: var(--font-mono);
         font-size: 1rem;
         transition: all 0.2s ease;
         box-sizing: border-box;
@@ -212,7 +210,6 @@
     .form-input:focus,
     .form-textarea:focus {
         outline: none;
-        background: white;
         box-shadow: 4px 4px 0 var(--pastelBlue);
         transform: translate(-2px, -2px);
     }
@@ -239,7 +236,6 @@
         transform: translate(-2px, -2px);
     }
     .submit-button:disabled {
-        background: #ccc;
         cursor: not-allowed;
         opacity: 0.6;
     }
@@ -291,11 +287,11 @@
     }
     .social-card {
         background: var(--pastelBlue);
-        color: white;
+        color: var(--offWhite);
     }
     .github-card {
         background: var(--black);
-        color: white;
+        color: var(--offWhite);
     }
     .discord-card {
         background: var(--pastelRed);
@@ -305,7 +301,7 @@
         margin-top: 1rem;
         padding: 0.5rem 1rem;
         background: var(--black);
-        color: white;
+        color: var(--offWhite);
         text-decoration: none;
         border: 2px solid var(--black);
         font-weight: bold;
@@ -314,7 +310,7 @@
         transition: all 0.2s ease;
     }
     .method-link:hover {
-        background: white;
+        background: var(--offWhite);
         color: var(--black);
         box-shadow: 2px 2px 0 var(--black);
         transform: translate(-1px, -1px);

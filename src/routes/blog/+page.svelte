@@ -92,7 +92,6 @@
     .post-card:hover {
         box-shadow: 4px 4px 0 var(--black);
         transform: translate(2px, 2px);
-        background: white;
     }
 
     .post-title {

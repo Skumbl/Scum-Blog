@@ -105,7 +105,6 @@
     .post-card:hover {
         box-shadow: 4px 4px 0 var(--black);
         transform: translate(2px, 2px);
-        background: white;
     }
 
     .post-title {
@@ -134,7 +133,6 @@
     }
 
     .error-box {
-        background: #ffe6e6;
         border: 3px solid darkred;
         padding: 2rem;
         text-align: center;

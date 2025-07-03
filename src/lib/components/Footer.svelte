@@ -3,23 +3,22 @@
 </script>
 <footer>
 	<div class="footer-container">
-		<p class="footer-title">This crap website was made by a real life human [me ヾ(＾∇＾)] - [2025]</p>
+		<p class="footer-title">This website was made by a real life human [me ヾ(＾∇＾)] - [2025]</p>
 
 		<div class="footer-columns">
 			<div class="left-column">
 				<p class="column-title">Site Pages</p>
 				<ul>
-					<li><a href="">About Me</a></li>
-					<li><a href="">All Blog Posts</a></li>
-					<li><a href="">Email Me</a></li>
+					<li><a href="/about">About Me</a></li>
+					<li><a href="/blog">All Blog Posts</a></li>
+					<li><a href="/contact">Email Me</a></li>
 				</ul>
 			</div>
 			<div class="right-column">
-				<p class="column-title">My Links and Jazz</p>
+				<p class="column-title">My Stuff</p>
 				<ul>
-				<!--TODO: link these actual hrefs to my socials-->
-					<li><a href="">Blue Sky</a></li>
-					<li><a href="">Github</a></li>
+					<li><a href="https://bsky.app/profile/scumble.xyz">Blue Sky</a></li>
+					<li><a href="https://bsky.app/profile/scumble.xyz">Github</a></li>
 					<li><a href="https://discord.com/users/scumble">Discord</a></li>
 				</ul>
 			</div>

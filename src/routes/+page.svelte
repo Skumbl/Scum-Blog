@@ -93,7 +93,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-bottom: 4rem;
+        padding: 4rem 0;
         position: relative;
     }
     .image-wrapper button {
@@ -122,7 +122,7 @@
         margin: 2rem auto;
         padding: 2.5rem;
         text-align: left;
-        outline: 2px solid var(--black);
+        outline: 4px solid var(--black);
         outline-offset: -2px;
         box-shadow: 10px 10px var(--black);
         background: var(--offWhite);

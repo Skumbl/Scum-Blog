@@ -281,7 +281,6 @@
         font-weight: 900;
     }
     .method-card p {
-        font-family: var(--font-mono);
         margin: 0.5rem 0;
         font-weight: bold;
     }

@@ -45,7 +45,6 @@
         font-size: 0.9rem;
         letter-spacing: 0.3px;
     }
-
     .theme-toggle :global(button:hover) {
         background: var(--pastelYellow);
         color: var(--black);
@@ -60,8 +59,6 @@
         opacity: 0.8;
         transition: all 0.3s ease;
     }
-
-    /* Mobile adjustments */
     @media (max-width: 768px) {
         .theme-toggle :global(button) {
             padding: 0.5rem 0.75rem;

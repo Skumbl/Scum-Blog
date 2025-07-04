@@ -124,7 +124,7 @@
     }
 		img	{
 				margin-top: 2rem;
-      	outline: 4px solid #000;
+      	outline: 4px solid var(--black);
       	outline-offset: -2px;
       	box-shadow: 10px 10px var(--black);
       	transition: box-shadow 0.5s ease-out;
@@ -162,6 +162,7 @@
 		.about-blurb > h1	{
 				font-size: 2rem;
         display: inline-block;
+				padding: 0.5rem 0.5rem;
 				margin: 0;
 				background: var(--black);
 				color: var(--offWhite);
@@ -238,7 +239,7 @@
     }
     .peripherals-card {
         background: var(--pastelBlue);
-        color: var(--offWhite);
+        color: var(--black);
     }
     .desktop-card {
         background: var(--offWhite);

@@ -96,7 +96,7 @@
 			<div class="method-card github-card">
 				<h3>GitHub</h3>
 				<p>github.com/skumbl</p>
-				<a href="https://github.com/skumbl" class="method-link">Check My Code</a>
+				<a href="https://github.com/Skumbl" class="method-link">Check My Code</a>
 			</div>
 
 			<div class="method-card discord-card">

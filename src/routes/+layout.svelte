@@ -3,6 +3,13 @@
 	import Header  from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { fade } from 'svelte/transition';
+	import { themeStore } from '$lib/stores/theme.js';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		themeStore.init();
+	});
+
 	export let data;
 </script>
 

@@ -226,7 +226,7 @@
     }
     .cta-button {
         background: var(--black);
-        color: white;
+        color: var(--offWhite);
         padding: 0.75rem 1.5rem;
         text-decoration: none;
         font-weight: bold;
@@ -236,7 +236,7 @@
         font-size: 0.9rem;
     }
     .cta-button:hover {
-        background: white;
+        background: var(--offWhite);
         color: var(--black);
         box-shadow: 10px 10px 0 var(--black);
         transform: translate(-5px, -5px);

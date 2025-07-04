@@ -1,5 +1,6 @@
 <script>
 	import '$lib/styles/style.css';
+	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 </script>
 <header>
 	<div class="logo-section">
@@ -29,12 +30,11 @@
 					<span>Contact</span>
 				</a>
 			</li>
-<!--			<li>-->
-<!--				<button class="nav-button theme-toggle">-->
-<!--					<img src="/gifs/darkmode-icon.gif" alt="Dark Mode" class="nav-gif" />-->
-<!--					<span>Toggle</span>-->
-<!--				</button>-->
-<!--			</li>-->
+			<li>
+				<div class="theme-toggle">
+					<ThemeToggle />
+				</div>
+			</li>
 		</ul>
 	</nav>
 </header>
@@ -63,7 +63,6 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
-        color: var(--offWhite);
         text-decoration: none;
         padding: 0.75rem 1rem;
         border: 3px solid var(--black);
@@ -130,6 +129,10 @@
     }
     .home-link:hover .nav-gif {
         animation: spin-fast 0.5s linear infinite;
+    }
+    .theme-toggle {
+        display: flex;
+        align-items: center;
     }
     @keyframes spin-slow {
         from { transform: rotate(0deg); }

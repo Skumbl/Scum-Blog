@@ -18,7 +18,7 @@
 				<p class="column-title">My Stuff</p>
 				<ul>
 					<li><a href="https://bsky.app/profile/scumble.xyz">Blue Sky</a></li>
-					<li><a href="https://bsky.app/profile/scumble.xyz">Github</a></li>
+					<li><a href="https://github.com/Skumbl">Github</a></li>
 					<li><a href="https://discord.com/users/scumble">Discord</a></li>
 				</ul>
 			</div>

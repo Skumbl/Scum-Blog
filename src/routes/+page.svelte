@@ -14,6 +14,16 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Scum Blog</title>
+	<meta name="description" content="A blog by and for bad developers" />
+	<meta property="og:title" content="Scum Blog" />
+	<meta property="og:description" content="A blog by and for bad developers" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://scumble.dev" />
+	<meta property="og:image" content="https://scumble.dev/gifs/Scum_Blog.gif" />
+</svelte:head>
+
 <div class="hero-section">
 	<div class="image-wrapper">
 		<button

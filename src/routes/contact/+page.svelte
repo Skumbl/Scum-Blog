@@ -18,6 +18,17 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Contact Me - Scum Blog</title>
+	<meta name="description" content="Send me complaints, be gentle" />
+	<meta property="og:title" content="Contact Me - Scum Blog" />
+	<meta property="og:description" content="Send me complaints, be gentle" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://scumble.dev/contact" />
+	<meta property="og:image" content="https://scumble.dev/gifs/email.gif" />
+	<link rel="canonical" href="https://scumble.dev/contact" />
+</svelte:head>
+
 <div class="contact-container">
 	<section class="contact-hero">
 		<div class="title-card">

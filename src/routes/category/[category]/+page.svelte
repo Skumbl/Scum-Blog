@@ -1,7 +1,19 @@
 <script lang="ts">
 	export let data;
 	const { posts, category, error } = data;
+	const postCount: number = posts?.length || 0;
 </script>
+
+<svelte:head>
+	<title>[{category}] Posts - Scum Blog</title>
+	<meta name="description" content={`${postCount} blog posts about ${category}`} />
+	<meta property="og:title" content={`[${category}] Posts - Scum Blog`} />
+	<meta property="og:description" content={`${postCount} blog posts about ${category}`} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={`https://scumble.dev/category/${category}`} />
+	<meta property="og:image" content="https://scumble.dev/gifs/Scum_Blog.gif" />
+	<link rel="canonical" href={`https://scumble.dev/category/${category}`} />
+</svelte:head>
 
 <div class="posts-container">
 	<header class="page-header">

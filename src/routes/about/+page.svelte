@@ -1,6 +1,17 @@
 <script>
 </script>
 
+<svelte:head>
+	<title>About Scumble - Scum Blog</title>
+	<meta name="description" content="About Rat King Scumble" />
+	<meta property="og:title" content="About Scumble - Scum Blog" />
+	<meta property="og:description" content="About rat king Scumble" />
+	<meta property="og:type" content="profile" />
+	<meta property="og:url" content="https://scumble.dev/about" />
+	<meta property="og:image" content="https://scumble.dev/gifs/triangle-moving.gif" />
+	<link rel="canonical" href="https://scumble.dev/about" />
+</svelte:head>
+
 <div class="container">
 	<section class="content">
 		<div class="about-header">

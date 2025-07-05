@@ -1,7 +1,19 @@
 <script lang="ts">
 	export let data: PageData;
 	const { posts, error } = data;
+	const postCount: number = posts?.length || 0;
 </script>
+
+<svelte:head>
+	<title>All Blog Posts - Scum Blog</title>
+	<meta name="description" content={`Browse all ${postCount} blog posts about JavaScript, web development, and bad coding practices`} />
+	<meta property="og:title" content="All Blog Posts - Scum Blog" />
+	<meta property="og:description" content={`Browse all ${postCount} blog posts about JavaScript, web development, and bad coding practices`} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://scumble.dev/blog" />
+	<meta property="og:image" content="https://scumble.dev/gifs/floppy_disk.gif" />
+	<link rel="canonical" href="https://scumble.dev/blog" />
+</svelte:head>
 
 <div class="posts-container">
 	<header class="page-header">

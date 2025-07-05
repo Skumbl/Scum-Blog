@@ -4,8 +4,28 @@
 	const { title, date, Content } = data.post;
 	const headerImage: string | null = data.headerImage;
 	const categories: string[] | undefined = data.post.categories;
-
+	const description: string = `Scumble's post on ${categories?.join(', ') || 'web development'} - Published ${date}`;
+	const pageUrl: string = `https://scumble.dev/blog/${data.post.slug}`;
+	const imageUrl: string = data.headerImage ? `https://scumble.dev${data.headerImage}` : 'https://scumble.dev/gifs/Scum_Blog.gif';
 </script>
+
+<svelte:head>
+	<title>{title} - Scum Blog</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={pageUrl} />
+	<meta property="og:image" content={imageUrl} />
+	<meta property="article:published_time" content={date} />
+	<meta property="article:author" content="Scumble" />
+	{#if categories}
+		{#each categories as category (category)}
+			<meta property="article:tag" content={category} />
+		{/each}
+	{/if}
+	<link rel="canonical" href={pageUrl} />
+</svelte:head>
 
 <article class="container">
 	{#if headerImage}

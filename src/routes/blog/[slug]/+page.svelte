@@ -4,7 +4,7 @@
 	const { title, date, Content } = data.post;
 	const headerImage: string | null = data.headerImage;
 	const categories: string[] | undefined = data.post.categories;
-	const description: string = `Scumble's post on ${categories?.join(', ') || 'web development'} - Published ${date}`;
+	const description: string = `${title || 'web development'} - Published ${date}`;
 	const pageUrl: string = `https://scumble.dev/blog/${data.post.slug}`;
 	const imageUrl: string = data.headerImage ? `https://scumble.dev${data.headerImage}` : 'https://scumble.dev/gifs/Scum_Blog.gif';
 </script>

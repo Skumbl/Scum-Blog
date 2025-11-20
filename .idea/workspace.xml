@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f576a647-bdda-4f94-8503-1bcd164cb4c7" name="Changes" comment="updated adapter" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Header" />
+        <option value="+layout" />
+        <option value="SCSS File" />
+        <option value="+page.svelte" />
+        <option value="JavaScript File" />
+        <option value="tsconfig.json" />
+        <option value="+page" />
+        <option value="Footer" />
+        <option value="TypeScript File" />
+        <option value="ThemeToggle" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2yDGeJ7WnwZ1ktJs4mCDgox2L4H" />
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.localhost:5173.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.index.ts.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/scumble/Projects/sveltris&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Debug&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/scumble/Projects/scumBlog/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/scumble/Projects/scumBlog/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/images/headerImages" />
+      <recent name="$PROJECT_DIR$/src/lib/assets/posts" />
+      <recent name="$PROJECT_DIR$/static/gifs" />
+      <recent name="$PROJECT_DIR$/src/lib/assets/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/routes/api/postsByCategory/[category]" />
+      <recent name="$PROJECT_DIR$/src/routes/api/posts" />
+      <recent name="$PROJECT_DIR$/src/lib/assets" />
+      <recent name="$PROJECT_DIR$/src/lib" />
+      <recent name="$PROJECT_DIR$/static/public/posts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="localhost:5173" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:5173/" useFirstLineBreakpoints="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/lib/utils/index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/src/lib/utils">
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="Node.js.index.ts" />
+        <item itemvalue="JavaScript Debug.localhost:5173" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.26927.40" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f576a647-bdda-4f94-8503-1bcd164cb4c7" name="Changes" comment="" />
+      <created>1749361823782</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749361823782</updated>
+      <workItem from="1749361825150" duration="78000" />
+      <workItem from="1749399732270" duration="11467000" />
+      <workItem from="1749425030725" duration="74000" />
+      <workItem from="1749425810312" duration="111000" />
+      <workItem from="1749426147031" duration="9000" />
+      <workItem from="1749426232886" duration="5000" />
+      <workItem from="1749426268143" duration="35000" />
+      <workItem from="1749428528048" duration="1841000" />
+      <workItem from="1749435232293" duration="3672000" />
+      <workItem from="1749516272209" duration="156000" />
+      <workItem from="1749517961655" duration="10520000" />
+      <workItem from="1749609804080" duration="756000" />
+      <workItem from="1749681332988" duration="42000" />
+      <workItem from="1749692992601" duration="85000" />
+      <workItem from="1749693085793" duration="191000" />
+      <workItem from="1749693301887" duration="49000" />
+      <workItem from="1749693362082" duration="17000" />
+      <workItem from="1749693603305" duration="710000" />
+      <workItem from="1749694339900" duration="4441000" />
+      <workItem from="1749772933342" duration="7465000" />
+      <workItem from="1749790358758" duration="56000" />
+      <workItem from="1749855267709" duration="2313000" />
+      <workItem from="1749944460847" duration="892000" />
+      <workItem from="1749955949094" duration="5504000" />
+      <workItem from="1750006954796" duration="9585000" />
+      <workItem from="1750049392917" duration="2186000" />
+      <workItem from="1750110807471" duration="6462000" />
+      <workItem from="1750297123569" duration="1811000" />
+      <workItem from="1750369999381" duration="12639000" />
+      <workItem from="1750538840312" duration="8832000" />
+      <workItem from="1750631396149" duration="2004000" />
+      <workItem from="1750908886042" duration="1629000" />
+      <workItem from="1750955587942" duration="19228000" />
+      <workItem from="1751003668650" duration="883000" />
+      <workItem from="1751036280096" duration="26291000" />
+      <workItem from="1751091197679" duration="573000" />
+      <workItem from="1751142584035" duration="3158000" />
+      <workItem from="1751173034414" duration="16055000" />
+      <workItem from="1751338491042" duration="4015000" />
+      <workItem from="1751377202788" duration="21080000" />
+      <workItem from="1751428085238" duration="3181000" />
+      <workItem from="1751472595276" duration="33640000" />
+      <workItem from="1751691631981" duration="2096000" />
+      <workItem from="1751743556940" duration="10135000" />
+      <workItem from="1751764626664" duration="809000" />
+      <workItem from="1751765842201" duration="2731000" />
+      <workItem from="1751771816512" duration="37000" />
+      <workItem from="1752020802226" duration="168000" />
+      <workItem from="1752020974846" duration="145000" />
+      <workItem from="1752789553615" duration="566000" />
+    </task>
+    <task id="LOCAL-00001" summary="implemented the general blog page">
+      <option name="closed" value="true" />
+      <created>1750376360505</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750376360505</updated>
+    </task>
+    <task id="LOCAL-00002" summary="simplified latest post">
+      <option name="closed" value="true" />
+      <created>1750388425241</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750388425241</updated>
+    </task>
+    <task id="LOCAL-00003" summary="implemented latest post on front page">
+      <option name="closed" value="true" />
+      <created>1750996143896</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750996143896</updated>
+    </task>
+    <task id="LOCAL-00004" summary="styled the blog page">
+      <option name="closed" value="true" />
+      <created>1751090393922</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751090393922</updated>
+    </task>
+    <task id="LOCAL-00005" summary="styled the blog page">
+      <option name="closed" value="true" />
+      <created>1751090469145</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1751090469145</updated>
+    </task>
+    <task id="LOCAL-00006" summary="blog content">
+      <option name="closed" value="true" />
+      <created>1751091230269</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751091230269</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated post styling">
+      <option name="closed" value="true" />
+      <created>1751254214528</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1751254214528</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated post styling">
+      <option name="closed" value="true" />
+      <created>1751377222480</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751377222480</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added footer">
+      <option name="closed" value="true" />
+      <created>1751377239092</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751377239092</updated>
+    </task>
+    <task id="LOCAL-00010" summary="revamp header and added more to the about me">
+      <option name="closed" value="true" />
+      <created>1751410075349</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751410075349</updated>
+    </task>
+    <task id="LOCAL-00011" summary="revamp header and added more to the about me">
+      <option name="closed" value="true" />
+      <created>1751410250870</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751410250870</updated>
+    </task>
+    <task id="LOCAL-00012" summary="revamped about me">
+      <option name="closed" value="true" />
+      <created>1751515003284</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751515003284</updated>
+    </task>
+    <task id="LOCAL-00013" summary="revamped about me">
+      <option name="closed" value="true" />
+      <created>1751515022029</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751515022029</updated>
+    </task>
+    <task id="LOCAL-00014" summary="implemented contact page">
+      <option name="closed" value="true" />
+      <created>1751517640024</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1751517640024</updated>
+    </task>
+    <task id="LOCAL-00015" summary="updated footer">
+      <option name="closed" value="true" />
+      <created>1751517881997</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1751517881997</updated>
+    </task>
+    <task id="LOCAL-00016" summary="updated metadata/favicon">
+      <option name="closed" value="true" />
+      <created>1751749342869</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1751749342869</updated>
+    </task>
+    <task id="LOCAL-00017" summary="updated metadata/favicon">
+      <option name="closed" value="true" />
+      <created>1751749349948</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1751749349948</updated>
+    </task>
+    <task id="LOCAL-00018" summary="updated metadata for posts">
+      <option name="closed" value="true" />
+      <created>1751751084523</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1751751084523</updated>
+    </task>
+    <task id="LOCAL-00019" summary="updated metadata for posts">
+      <option name="closed" value="true" />
+      <created>1751751141585</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1751751141585</updated>
+    </task>
+    <task id="LOCAL-00020" summary="updated adapter">
+      <option name="closed" value="true" />
+      <created>1752020876151</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1752020876151</updated>
+    </task>
+    <task id="LOCAL-00021" summary="updated adapter">
+      <option name="closed" value="true" />
+      <created>1752021104594</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1752021104594</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implemented the general blog page" />
+    <MESSAGE value="simplified latest post" />
+    <MESSAGE value="implemented latest post on front page" />
+    <MESSAGE value="styled the blog page" />
+    <MESSAGE value="blog content" />
+    <MESSAGE value="updated post styling" />
+    <MESSAGE value="added footer" />
+    <MESSAGE value="revamp header and added more to the about me" />
+    <MESSAGE value="revamped about me" />
+    <MESSAGE value="implemented contact page" />
+    <MESSAGE value="updated footer" />
+    <MESSAGE value="updated metadata/favicon" />
+    <MESSAGE value="updated metadata for posts" />
+    <MESSAGE value="updated adapter" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated adapter" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="js.build_tools.npm">
+        <watch expression="getImage" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

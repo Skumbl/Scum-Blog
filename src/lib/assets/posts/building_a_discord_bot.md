@@ -34,7 +34,7 @@ The thing I've noticed about working with Typescript on a few small side project
 
 After following the guide, everything I built was pretty standard. At least from what I can tell as a new discord.js dev.
 
-I defined a `Command` type that would hold the basics of a slash command and for Events:
+I defined a `Command` type that would hold the basics of a slash command aswell as a type for defining `Events`:
 ```ts
 export interface Command {
     data: SlashCommandBuilder | SlashCommandOptionsOnlyBuilder;

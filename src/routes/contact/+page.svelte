@@ -10,7 +10,7 @@
 		const emailSubject = subject || 'Message from Scum Blog';
 		const emailBody = `Hi Scumble,\n\n${body}\n\nBest regards,\n${name || 'Anonymous'}`;
 
-		return `mailto:your-scumb1e@proton.me?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+		return `mailto:scumb1e@proton.me?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 	}
 
 	function handleSubmit() {

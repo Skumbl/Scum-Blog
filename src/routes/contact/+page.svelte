@@ -85,7 +85,7 @@
 
 			<p class="form-note">
 				This will open your default email client. If that's not what you want, just email me
-				directly at: <strong>scumble@pm.me</strong>
+				directly at: <strong>scumb1e@pm.me</strong>
 			</p>
 		</div>
 	</section>

@@ -20,9 +20,9 @@
 
 <svelte:head>
 	<title>Contact Me - Scum Blog</title>
-	<meta name="description" content="Send me complaints, be gentle" />
+	<meta name="description" content="Feel Free to Reach Out!" />
 	<meta property="og:title" content="Contact Me - Scum Blog" />
-	<meta property="og:description" content="Send me complaints, be gentle" />
+	<meta property="og:description" content="Feel free to reach out!" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://scumble.dev/contact" />
 	<meta property="og:image" content="https://scumble.dev/gifs/email.gif" />
@@ -38,7 +38,7 @@
 
 		<div class="status-box">
 			<div class="status-indicator"></div>
-			<span class="status-text">Currently Available for Mid Takes</span>
+			<span class="status-text">Contact Online</span>
 		</div>
 	</section>
 
@@ -63,7 +63,7 @@
 					type="text"
 					id="subject"
 					bind:value={formData.subject}
-					placeholder="why the framework I like is bad"
+					placeholder="interesting topic to email me about"
 					class="form-input"
 				/>
 			</div>
@@ -73,7 +73,7 @@
 				<textarea
 					id="message"
 					bind:value={formData.body}
-					placeholder="Type your message here... Please be gentle"
+					placeholder="Compose message"
 					class="form-textarea"
 					rows="8"
 				></textarea>
@@ -109,7 +109,7 @@
 			<div class="method-card discord-card">
 				<h3>Discord</h3>
 				<p>@scumble</p>
-				<span class="method-note">for 'gamin</span>
+				<span class="method-note">Best Way to Chat</span>
 			</div>
 		</div>
 	</section>

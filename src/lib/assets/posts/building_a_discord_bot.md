@@ -1,6 +1,6 @@
 ---
 title: Building a Discord Economy for my Friends
-date: '2025-11-2025'
+date: '2025-11-25'
 categories:
   - "software development"
   - "discord"

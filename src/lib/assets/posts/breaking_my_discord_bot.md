@@ -13,6 +13,7 @@ So let's start where we left off. I had finished the discord bot in the last pos
 
 As I've been working on and off on this discord bot, I've added release announcements with each feature. Here are the updates I've made since the last post:
 
+---
 ### Ignant Shop Patch 1.01
 
 _2025-11-22_
@@ -27,7 +28,7 @@ Since people wanted trading, I made it so people can transfer points between eac
 - /give all
 - /refund (lets you return an item for 70% of its cost)
 - update /help command
-
+---
 ### Ignant Shop Patch 1.02
 
 _2025-11-24_
@@ -42,7 +43,7 @@ Updated `/help` with all new commands and adjusted message colors to not be so u
 
 - `/blackjack`
 - `/refund` (lets you return an item for 70% of its cost)
-
+---
 ### Ignant Shop Patch 1.03
 
 _2025-11-24_
@@ -56,7 +57,7 @@ Updated transfer slash commands to display the correct name and updated `/help` 
 #### Currently in progress
 
 - /refund (lets you return an item for 70% of its cost)
-
+---
 ## How I Ended Up Implementing Blackjack
 
 To build blackjack, I built it out similarly to how I built my other slash commands. Using Discord.js's SlashCommandBuilder, I created a `/blackjack` command that takes in a user's wager as an input.
@@ -200,7 +201,7 @@ export function formatHand(cards: Card[], hideFirst: boolean = false): string {
     return `[${cards.map((c: Card) => c.display).join('] [')}]`;
 }
 ```
-
+---
 ### Ignant Shop Patch 1.04
 
 _the gambling update_
@@ -220,7 +221,7 @@ All gambling should include your new wallet balance at the bottom so you don't n
 Updated `/help` with all new commands.
 
 #### Nothing currently in progress. Feel free to @ me for suggestions.
-
+---
 ## This Was the Update That Broke Everything
 
 So here we are. Up until now, all the bugs I've had have been formatting problems and fun little issues. We were gambling so many of the coins I thought it would be fun to make some quality of life features and I'd rebalance the outcomes of the games so they paid out more. That would've been fine if I had known about the concept of EV.
@@ -242,7 +243,7 @@ So within 2 hours of this patch being live, users had items from the shop that t
 I had effectively created a failed state's economy in DISCORD.
 
 So, needless to say I had to patch this.
-
+---
 ### Ignant Shop Patch 1.05
 
 _the gambling update - post collapse_
@@ -258,6 +259,7 @@ _2025-11-29_
 That should give the house a 5% overall edge, much more generous than a real casino's 15%, but not so much that we break the economy again.
 
 #### Nothing forward-facing currently in progress. Feel free to @ me for suggestions.
+---
 
 ## So What Now?
 

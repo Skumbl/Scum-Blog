@@ -1,5 +1,5 @@
 ---
-title: I Crashed My Discord Economy :(
+title: I Crashed My Discord Economy
 date: '2025-12-19'
 categories:
   - "software development"

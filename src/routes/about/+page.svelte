@@ -64,7 +64,7 @@
 			<div class="spec-card system-card">
 				<h3>System Information</h3>
 				<p><strong>Operating System:</strong> Fedora Linux 42 (KDE Plasma Desktop Edition)</p>
-				<p><strong>Shell:</strong> fish 4.0.2</p>
+				<p><strong>Shell:</strong> zsh - Oh My Zsh</p>
 			</div>
 
 			<div class="spec-card hardware-card">

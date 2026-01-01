@@ -19,37 +19,14 @@
 				<h1 class="title-block">ABOUT ME</h1>
 			</div>
 
-			<div >
-				<img src="/gifs/triangle-moving.gif" alt="super pfp">
+			<div>
+				<img src="/gifs/triangle-moving.gif" alt="super pfp" />
 				<p>(that's a real picture of me)</p>
 			</div>
-	</div>
-	</section>
-
-	<section class="about-blurb">
-		<h1>[who am I?]</h1>
-		<p><strong>hello ( ﾟ▽ﾟ)/</strong>
-			my “name” is Scumble. I’m a developer who very originally decided to make a blog.
-		</p>
-		<p>
-			My online name comes from a book by Terry Pratchett. I chose it when I was a high-school freshman, and it just kind of
-			stuck as the name I use online, so now you’re stuck with the scum blog.
-		</p>
-		<p>
-		The projects I work on professionally tend to be very old and very established development tools, like Java, Spring, and AngularJS,
-		so one of the reasons I made this blog was to give myself a way to practice building something in the JavaScript ecosystem
-		and learn some new frameworks.
-		</p>
-		<p>
-			(I also just like to yap)
-		</p>
-		<p>
-			Do I like the JavaScript ecosystem? Not really. But I love to learn, so here we are.
-		</p>
-		<div class="boilerplate">
-			I'm also the number-one boilerplate enjoyer — so what do I know
 		</div>
 	</section>
+
+	<section class="about-blurb"></section>
 
 	<section class="pc-spec">
 		<h2 class="setup-title">MY SETUP</h2>
@@ -86,8 +63,8 @@
 				<h3>Peripherals</h3>
 				<div class="spec-section">
 					<h4>Input Devices</h4>
-					<p><strong>Keyboard:</strong> Keychron M14 Alice Layout</p>
-					<p><strong>Mouse:</strong> Logitech G502 Hero</p>
+					<p><strong>Keyboard:</strong> HHKB Professional 2</p>
+					<p><strong>Mouse:</strong> MX Master 3s</p>
 					<p><strong>Microphone:</strong> Audio-Technica ATR1500x</p>
 				</div>
 				<div class="spec-section">
@@ -113,7 +90,8 @@
 				</div>
 				<div class="spec-section">
 					<h4>Terminal</h4>
-					<p><strong>Terminal Emulator:</strong> blackbox-terminal</p>
+					<p><strong>Terminal Emulator:</strong> Alacritty</p>
+					<p><strong>Text Editor:</strong> Zed with Vim motions</p>
 				</div>
 			</div>
 		</div>
@@ -121,173 +99,175 @@
 </div>
 
 <style>
-		.container {
-        max-width: min(50rem, 90vw);
-        margin: 0 auto;
-        padding: 0 1rem;
-        text-align: left;
-    }
-    .about-header {
-        flex: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-		img	{
-				margin-top: 2rem;
-      	outline: 4px solid var(--black);
-      	outline-offset: -2px;
-      	box-shadow: 10px 10px var(--black);
-      	transition: box-shadow 0.5s ease-out;
-        transform: rotate(-2deg);
-		}
-		img:hover {
-				box-shadow: 4px 4px 0 var(--black);
-		}
-		.title-block {
-				font-size: 3rem;
-        margin: 0 0 1rem;
-        display: inline-block;
-        padding: 2rem;
-        text-align: center;
-				background: var(--pastelYellow);
-				flex: auto;
-				outline: 4px solid var(--black);
-				outline-offset: -2px;
-				box-shadow: 10px 10px var(--black);
-				transition: box-shadow 0.5s ease-out;
-		}
-		.title-block:hover {
-				box-shadow: 4px 4px 0 var(--black);
-		}
-		.about-blurb {
-				padding: 1rem 2rem 2rem;
-				outline: 4px solid var(--black);
-				outline-offset: -2px;
-				box-shadow: 10px 10px var(--black);
-				transition: box-shadow 0.5s ease-out;
-		}
-		.title > p {
-				font-size: 1.8rem;
-		}
-		.about-blurb > h1	{
-				font-size: 2rem;
-        display: inline-block;
-				padding: 0.5rem 0.5rem;
-				margin: 0;
-				background: var(--black);
-				color: var(--offWhite);
-		}
-		.about-blurb > p >strong	{
-				color: var(--pastelRed);
-				font-size: 1.3rem;
-				padding:0;
-		}
-		.about-blurb:hover	{
-				box-shadow: 4px 4px 0 var(--black);
-		}
-    .boilerplate {
-        display: inline-block;
-        background: var(--pastelRed);
-				margin-top: 1rem;
-        padding: 0.5rem;
-        border: 2px solid var(--black);
-        box-shadow: 5px 5px var(--black);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        transform: rotate(2deg) skew(-2deg);
-    }
-    .boilerplate:hover {
-        transform: rotate(2deg) skew(-2deg) translate(-5px, -5px);
-				box-shadow: 2px 2px var(--black);
-    }
-    .pc-spec {
-        margin-top: 3rem;
-    }
+	.container {
+		max-width: min(50rem, 90vw);
+		margin: 0 auto;
+		padding: 0 1rem;
+		text-align: left;
+	}
+	.about-header {
+		flex: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	img {
+		margin-top: 2rem;
+		outline: 4px solid var(--black);
+		outline-offset: -2px;
+		box-shadow: 10px 10px var(--black);
+		transition: box-shadow 0.5s ease-out;
+		transform: rotate(-2deg);
+	}
+	img:hover {
+		box-shadow: 4px 4px 0 var(--black);
+	}
+	.title-block {
+		font-size: 3rem;
+		margin: 0 0 1rem;
+		display: inline-block;
+		padding: 2rem;
+		text-align: center;
+		background: var(--pastelYellow);
+		flex: auto;
+		outline: 4px solid var(--black);
+		outline-offset: -2px;
+		box-shadow: 10px 10px var(--black);
+		transition: box-shadow 0.5s ease-out;
+	}
+	.title-block:hover {
+		box-shadow: 4px 4px 0 var(--black);
+	}
+	.about-blurb {
+		padding: 1rem 2rem 2rem;
+		outline: 4px solid var(--black);
+		outline-offset: -2px;
+		box-shadow: 10px 10px var(--black);
+		transition: box-shadow 0.5s ease-out;
+	}
+	.title > p {
+		font-size: 1.8rem;
+	}
+	.about-blurb > h1 {
+		font-size: 2rem;
+		display: inline-block;
+		padding: 0.5rem 0.5rem;
+		margin: 0;
+		background: var(--black);
+		color: var(--offWhite);
+	}
+	.about-blurb > p > strong {
+		color: var(--pastelRed);
+		font-size: 1.3rem;
+		padding: 0;
+	}
+	.about-blurb:hover {
+		box-shadow: 4px 4px 0 var(--black);
+	}
+	.boilerplate {
+		display: inline-block;
+		background: var(--pastelRed);
+		margin-top: 1rem;
+		padding: 0.5rem;
+		border: 2px solid var(--black);
+		box-shadow: 5px 5px var(--black);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+		transform: rotate(2deg) skew(-2deg);
+	}
+	.boilerplate:hover {
+		transform: rotate(2deg) skew(-2deg) translate(-5px, -5px);
+		box-shadow: 2px 2px var(--black);
+	}
+	.pc-spec {
+		margin-top: 3rem;
+	}
 
-    .setup-title {
-        font-size: 2.5rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        text-align: center;
-        margin: 0 0 2rem 0;
-        padding: 1.5rem;
-        background: var(--pastelBlue);
-        color: var(--offWhite);
-        outline: 4px solid var(--black);
-        outline-offset: -2px;
-        box-shadow: 10px 10px var(--black);
-        transition: box-shadow 0.5s ease-out;
-    }
-    .setup-title:hover {
-        box-shadow: 4px 4px 0 var(--black);
-    }
-    .spec-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-    .spec-card {
-        padding: 2rem;
-        outline: 4px solid var(--black);
-        outline-offset: -2px;
-        box-shadow: 10px 10px var(--black);
-        transition: box-shadow 0.5s ease-out;
-    }
-    .spec-card:hover {
-        box-shadow: 4px 4px 0 var(--black);
-    }
-    .spec-card h3 {
-        font-size: 1.5rem;
-        font-weight: 900;
-        margin: 0 0 1.5rem 0;
-        text-transform: uppercase;
-    }
-    .system-card {
-        background: var(--pastelYellow);
-    }
-    .hardware-card {
-        background: var(--pastelRed);
-    }
-    .peripherals-card {
-        background: var(--pastelBlue);
-        color: var(--black);
-    }
-    .desktop-card {
-        background: var(--offWhite);
-    }
-    .spec-section {
-        margin-bottom: 1.5rem;
-    }
-    .spec-section h4 {
-        font-weight: bold;
-        text-decoration: underline;
-        margin: 0 0 0.5rem 0;
-        font-size: 1.1rem;
-    }
-    .spec-card p {
-        margin: 0.3rem 0;
-        font-size: 0.9rem;
-    }
-    @media (max-width: 768px) {
-        .about-header {
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-        .title {
-            order: 2;
-            margin-top: 0;
-            padding-top: 0;
-        }
-        .title + div {
-            order: 1;
-        }
-        .spec-grid {
-            grid-template-columns: 1fr;
-        }
-        .setup-title {
-            font-size: 2rem;
-            padding: 1rem;
-        }
-    }
+	.setup-title {
+		font-size: 2.5rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0 0 2rem 0;
+		padding: 1.5rem;
+		background: var(--pastelBlue);
+		color: var(--offWhite);
+		outline: 4px solid var(--black);
+		outline-offset: -2px;
+		box-shadow: 10px 10px var(--black);
+		transition: box-shadow 0.5s ease-out;
+	}
+	.setup-title:hover {
+		box-shadow: 4px 4px 0 var(--black);
+	}
+	.spec-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+	.spec-card {
+		padding: 2rem;
+		outline: 4px solid var(--black);
+		outline-offset: -2px;
+		box-shadow: 10px 10px var(--black);
+		transition: box-shadow 0.5s ease-out;
+	}
+	.spec-card:hover {
+		box-shadow: 4px 4px 0 var(--black);
+	}
+	.spec-card h3 {
+		font-size: 1.5rem;
+		font-weight: 900;
+		margin: 0 0 1.5rem 0;
+		text-transform: uppercase;
+	}
+	.system-card {
+		background: var(--pastelYellow);
+	}
+	.hardware-card {
+		background: var(--pastelRed);
+	}
+	.peripherals-card {
+		background: var(--pastelBlue);
+		color: var(--black);
+	}
+	.desktop-card {
+		background: var(--offWhite);
+	}
+	.spec-section {
+		margin-bottom: 1.5rem;
+	}
+	.spec-section h4 {
+		font-weight: bold;
+		text-decoration: underline;
+		margin: 0 0 0.5rem 0;
+		font-size: 1.1rem;
+	}
+	.spec-card p {
+		margin: 0.3rem 0;
+		font-size: 0.9rem;
+	}
+	@media (max-width: 768px) {
+		.about-header {
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+		}
+		.title {
+			order: 2;
+			margin-top: 0;
+			padding-top: 0;
+		}
+		.title + div {
+			order: 1;
+		}
+		.spec-grid {
+			grid-template-columns: 1fr;
+		}
+		.setup-title {
+			font-size: 2rem;
+			padding: 1rem;
+		}
+	}
 </style>

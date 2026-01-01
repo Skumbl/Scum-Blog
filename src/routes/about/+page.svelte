@@ -26,7 +26,36 @@
 		</div>
 	</section>
 
-	<section class="about-blurb"></section>
+	<section class="about-blurb">
+		<h1>[who am I and what is the blog?]</h1>
+		<p>
+			<strong>hello ( ﾟ▽ﾟ)/</strong>
+			my name is Jan, but I've been going by Scumble online for the last 10 years so it's what I tend
+			to stick with. I'm a corporate developer by trade, but I love to code in my free time as well so
+			I made my own little corner of the internet.
+		</p>
+		<p>
+			My online name comes from a book by Terry Pratchett. I chose it when I was a high-school
+			freshman, and it just kind of stuck as the name I use online, so now you're stuck with the
+			scum blog.
+		</p>
+		<p>
+			The point of this blog isn't just to talk about programming projects that I work on (though I
+			suspect that to be one of the primary topics) but also my opinions on things I care about.
+		</p>
+		<p>
+			The projects I work on professionally tend to be very old and very established development
+			tools, like Java, Spring, and AngularJS, so one of the reasons I made this blog was to give
+			myself a way to practice building something in the JavaScript ecosystem and learn some new
+			frameworks.
+		</p>
+		<p>(I also just like to yap)</p>
+		<p>
+			Do I like the JavaScript ecosystem? Eh, I didn't love it originally but the more I use
+			TypeScript the more I like it. (that is until resolving promises get too involved)
+		</p>
+		<div class="boilerplate">I'm also the number-one boilerplate enjoyer — so what do I know</div>
+	</section>
 
 	<section class="pc-spec">
 		<h2 class="setup-title">MY SETUP</h2>

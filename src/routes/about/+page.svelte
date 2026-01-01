@@ -27,7 +27,7 @@
 	</section>
 
 	<section class="about-blurb">
-		<h1>[who am I and what is the blog?]</h1>
+		<h1>[who am I and what is this blog?]</h1>
 		<p>
 			<strong>hello ( ﾟ▽ﾟ)/</strong>
 			my name is Jan, but I've been going by Scumble online for the last 10 years so it's what I tend

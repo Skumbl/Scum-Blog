@@ -34,7 +34,7 @@
 			<img src="/gifs/Scum_Blog.gif" alt="Scum Blog Banner" />
 		</button>
 		{#if spinCount > 0}
-			<p class="spin-counter">Spins: {spinCount}</p>
+			<p class="spin-counter">Useless Spin Counter: {spinCount}</p>
 		{/if}
 	</div>
 

@@ -96,8 +96,8 @@
 		<div class="methods-grid">
 			<div class="method-card social-card">
 				<h3>Social</h3>
-				<p>@janpcb on Threads</p>
-				<a href="https://www.threads.com/@janpcb" class="method-link">Follow Me</a>
+				<p>@Skumbl on Twitter (I'm not calling it X)</p>
+				<a href="https://x.com/Skumbl" class="method-link">Follow Me</a>
 			</div>
 
 			<div class="method-card github-card">

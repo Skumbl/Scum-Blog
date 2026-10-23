@@ -7,7 +7,7 @@
 
 	function generateMailto() {
 		const { subject, body, name } = formData;
-		const emailSubject = subject || 'Message from Scum Blog';
+	    const emailSubject = `ScumBlog - ${subject.trim() || 'No subject'}`;
 		const emailBody = `Hi Scumble,\n\n${body}\n\nBest regards,\n${name || 'Anonymous'}`;
 
 		return `mailto:scumb1e@proton.me?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
@@ -73,7 +73,7 @@
 				<textarea
 					id="message"
 					bind:value={formData.body}
-					placeholder="Compose message"
+					placeholder="I usually will get back to you in a day"
 					class="form-textarea"
 					rows="8"
 				></textarea>

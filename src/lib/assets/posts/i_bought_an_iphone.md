@@ -1,6 +1,6 @@
 ---
 title: I Bought an iPhone
-date: 2026-10-22
+date: '2026-10-22'
 categories:
   - software development
   - opinion

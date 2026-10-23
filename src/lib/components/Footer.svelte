@@ -18,7 +18,7 @@
 			<div class="right-column">
 				<p class="column-title">My Stuff</p>
 				<ul>
-					<li><a href="https://www.threads.com/@janpcb" target="_blank">Threads</a></li>
+					<li><a href="https://x.com/Skumbl" target="_blank">Xitter</a></li>
 					<li><a href="https://github.com/Skumbl" target="_blank">Github</a></li>
 					<li><a href="https://discord.com/users/scumble" target="_blank">Discord</a></li>
 				</ul>

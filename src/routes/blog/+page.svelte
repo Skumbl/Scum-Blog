@@ -18,7 +18,7 @@
 </svelte:head>
 
 <h1 class="page-title">blog posts</h1>
-<p class="page-subtitle">{postCount} posts found. quality not guaranteed.</p>
+<p class="page-subtitle">{postCount} posts found. my mindpalace is a waffle house.</p>
 
 {#if error}
 	<div class="error-box">

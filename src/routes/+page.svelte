@@ -68,7 +68,7 @@
 			{#if post.categories}
 				<div class="tags">
 					{#each post.categories as category (category)}
-						<a class="tag" href="/category/{category}" target="_blank">{category}</a>
+						<a class="tag" href="/category/{category}">{category}</a>
 					{/each}
 				</div>
 			{/if}
@@ -77,8 +77,8 @@
 </section>
 
 <nav class="cta">
-	<a href="/blog" target="_blank">→ view all posts</a>
-	<a href="/about" target="_blank">→ about this mess</a>
+	<a href="/blog">→ view all posts</a>
+	<a href="/about">→ about this mess</a>
 </nav>
 
 <style>

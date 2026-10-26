@@ -21,7 +21,6 @@
 				<li>
 					<a
 						href={link.href}
-						target="_blank"
 						class:active={$page.url.pathname.startsWith(link.href)}
 					>
 						<img src={link.gif} alt="" />

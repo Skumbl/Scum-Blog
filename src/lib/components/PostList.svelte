@@ -14,7 +14,7 @@
 		<li>
 			<span class="date">{post.date}</span>
 			<div class="body">
-				<a href="/blog/{post.slug}" class="post-link">{post.title}</a>
+				<a href="/blog/{post.slug}" class="post-link" target="_blank">{post.title}</a>
 				{#if post.categories && post.categories.length > 0}
 					<div class="tags">
 						{#each post.categories as category (category)}

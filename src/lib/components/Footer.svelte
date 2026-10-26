@@ -4,9 +4,9 @@
 	<div class="columns">
 		<ul>
 			<li class="heading">site</li>
-			<li><a href="/about" target="_blank">about me</a></li>
-			<li><a href="/blog" target="_blank">all blog posts</a></li>
-			<li><a href="/contact" target="_blank">email me</a></li>
+			<li><a href="/about">about me</a></li>
+			<li><a href="/blog">all blog posts</a></li>
+			<li><a href="/contact">email me</a></li>
 		</ul>
 		<ul>
 			<li class="heading">elsewhere</li>

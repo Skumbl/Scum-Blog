@@ -27,43 +27,47 @@
 	<link rel="canonical" href={pageUrl} />
 </svelte:head>
 
-<article class="container">
+<article>
+	<a href="/blog" class="back">← back to the pile</a>
+
 	{#if headerImage}
-		<img
-			class="headerImage"
-			src={data.headerImage}
-			alt="article header"
-		/>
+		<img class="headerImage" src={data.headerImage} alt="article header" />
 	{/if}
 
 	<header class="post-header">
 		<h1 class="title">{title}</h1>
-
-		<time class="date" datetime={date}>
-			{date}
-		</time>
-		{#if categories && categories.length > 0}
-			<div class="tags">
-				{#each categories as category (category)}
-					<a class="tag" href="/category/{category}">{category}</a>
-				{/each}
-			</div>
-		{/if}
+		<div class="meta">
+			<time class="date" datetime={date}>{date}</time>
+			{#if categories && categories.length > 0}
+				<div class="tags">
+					{#each categories as category (category)}
+						<a class="tag" href="/category/{category}">{category}</a>
+					{/each}
+				</div>
+			{/if}
+		</div>
 	</header>
+
 	<div class="content">
 		<Content />
 	</div>
-	<div class = "spacer"></div>
+
+	<p class="eof">-- EOF --</p>
 </article>
 
 <style>
-		.container {
-        max-width: min(60rem, 90vw);
-        margin: 0 auto;
-        padding: 0 1rem;
-        text-align: left;
-    }
-		.spacer {
-				padding-top: 2rem;
-		}
+	.back {
+		display: inline-block;
+		margin-bottom: 2rem;
+		font-size: 0.85rem;
+		color: var(--muted);
+		text-decoration: none;
+	}
+	.eof {
+		margin: 4rem 0 0;
+		text-align: center;
+		font-size: 0.8rem;
+		color: var(--muted);
+		letter-spacing: 0.1em;
+	}
 </style>

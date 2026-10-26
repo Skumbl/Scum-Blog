@@ -12,57 +12,37 @@
 	}
 </script>
 
-<div class="theme-toggle">
-	<button
-		on:click={handleThemeToggle}
-		aria-label="Toggle dark mode"
-	>
-		{#if $themeStore === 'light'}
-			<img src="/gifs/moon.gif" alt="moon" class="nav-gif">
-			<span>Troglodyte</span>
-		{:else}
-			<img src="/gifs/earth.gif" alt="earf" class="nav-gif">
-			<span>FlashBang</span>
-		{/if}
-	</button>
-</div>
-
+<button on:click={handleThemeToggle} aria-label="Toggle dark mode">
+	{#if $themeStore === 'light'}
+		<img src="/gifs/moon.gif" alt="" />
+		<span>troglodyte</span>
+	{:else}
+		<img src="/gifs/earth.gif" alt="" />
+		<span>flashbang</span>
+	{/if}
+</button>
 
 <style>
-    .theme-toggle :global(button) {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
-        background: var(--black);
-        color: var(--offWhite);
-        border: 3px solid var(--black);
-        font: inherit;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 0.9rem;
-        letter-spacing: 0.3px;
-    }
-    .theme-toggle :global(button:hover) {
-        background: var(--pastelYellow);
-        color: var(--black);
-        border: 3px solid var(--black);
-        box-shadow: 4px 4px 0 var(--black);
-        transform: translate(-2px, -2px);
-    }
-    .nav-gif {
-        width: 18px;
-        height: 18px;
-        object-fit: contain;
-        opacity: 0.8;
-        transition: all 0.3s ease;
-    }
-    @media (max-width: 768px) {
-        .theme-toggle :global(button) {
-            padding: 0.5rem 0.75rem;
-            font-size: 0.8rem;
-        }
-    }
+	button {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 0.15rem 0.5rem;
+		font: inherit;
+		color: var(--muted);
+		background: none;
+		border: 1px solid var(--rule);
+		border-radius: 999px;
+		cursor: pointer;
+		transition: color 0.15s ease, border-color 0.15s ease;
+	}
+	button:hover {
+		color: var(--fg);
+		border-color: var(--accent);
+	}
+	img {
+		width: 14px;
+		height: 14px;
+		object-fit: contain;
+	}
 </style>

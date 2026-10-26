@@ -20,13 +20,17 @@ async function fetchAllPosts(): Promise<PostData[]> {
 	return posts;
 }
 
+// newest first; posts with a missing/invalid date sink to the bottom instead of breaking the sort
+function byDateDesc(a: PostData, b: PostData): number {
+	const timeA = new Date(a.date).getTime() || 0;
+	const timeB = new Date(b.date).getTime() || 0;
+	return timeB - timeA;
+}
+
 export async function getAllPosts(): Promise<PostData[]> {
 	const posts: PostData[] = await fetchAllPosts();
 
-	return posts.sort(
-		(a: PostData, b: PostData): number =>
-			new Date(b.date).getTime() - new Date(a.date).getTime()
-	);
+	return posts.sort(byDateDesc);
 }
 
 export async function getLatestPost(): Promise<PostData | null> {
@@ -36,9 +40,7 @@ export async function getLatestPost(): Promise<PostData | null> {
 		return null;
 	}
 
-	return posts.sort(
-		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-	)[0];
+	return posts.sort(byDateDesc)[0];
 }
 
 export async function getPostsByCategory(category: string): Promise<PostData[]> {
@@ -47,7 +49,5 @@ export async function getPostsByCategory(category: string): Promise<PostData[]> 
 	const filteredPosts: PostData[] = allPosts.filter((post: PostData) =>
 		post?.categories?.includes(category)
 	);
-	return filteredPosts.sort(
-		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-	);
+	return filteredPosts.sort(byDateDesc);
 }

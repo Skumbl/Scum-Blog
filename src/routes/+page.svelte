@@ -2,6 +2,15 @@
 	export let data;
 	const { post, error } = data;
 
+	// each letter gets a colour + a tilt so it looks like a ransom note
+	const colors = ['var(--red)', 'var(--blue)', 'var(--yellow)'];
+	const tilts = [-6, 4, -2, 5, 0, -4, 3, -5, 6];
+	const letters = 'scum.blog'.split('').map((char, i) => ({
+		char,
+		color: char === '.' ? 'var(--fg)' : colors[i % colors.length],
+		tilt: tilts[i % tilts.length]
+	}));
+
 	let logoClicked = false;
 	let spinCount = 0;
 
@@ -24,272 +33,165 @@
 	<meta property="og:image" content="https://scumble.dev/gifs/Scum_Blog.gif" />
 </svelte:head>
 
-<div class="hero-section">
-	<div class="image-wrapper">
-		<button
-			class:clicked={logoClicked}
-			on:click={handleLogoClick}
-			aria-label="Spin the logo (clicked {spinCount} times)"
-		>
-			<img src="/gifs/Scum_Blog.gif" alt="Scum Blog Banner" />
-		</button>
-		{#if spinCount > 0}
-			<p class="spin-counter">Useless Spin Counter: {spinCount}</p>
-		{/if}
-	</div>
+<section class="hero">
+	<button
+		class="logo"
+		class:clicked={logoClicked}
+		on:click={handleLogoClick}
+		aria-label="Spin the logo (clicked {spinCount} times)"
+	>
+		<span class="wordmark" aria-hidden="true">
+			{#each letters as letter, i (i)}
+				<span style="--i: {i}; --tilt: {letter.tilt}deg; color: {letter.color}">{letter.char}</span>
+			{/each}
+		</span>
+		<span class="badge" aria-hidden="true">v0.9</span>
+	</button>
+	<p class="spin-counter" class:visible={spinCount > 0}>useless spin counter: {spinCount}</p>
 
-	<div class="front-blurb">
-		<div class="status-bar">
-			<span class="status-indicator"></span>
-			<h1 class="error-text">Perpetually 90% Complete</h1>
+	<p class="status"><span class="dot"></span>perpetually 90% complete</p>
+	<h1 class="tagline">a blog written by and for bad developers.</h1>
+</section>
+
+<section class="latest">
+	<p class="label">latest post</p>
+
+	{#if error}
+		<div class="error-box">
+			<p class="error-text">ERROR: shidiot broke his website</p>
+			<p class="error-subtitle">HTTP 500</p>
 		</div>
-
-		<h2 class="tagline">
-			<i>a blog written by and for bad developers</i>
-		</h2>
-
-		<div class="latest-post-section">
-			<div class="section-header">
-				<span class="bracket">[</span>
-				<strong>Latest Blog Post</strong>
-				<span class="bracket">]</span>
-			</div>
-
-			{#if error}
-				<div class="error-box">
-					<p class="error-text">ERROR: shidiot broke his website</p>
-					<p class="error-code">HTTP 500</p>
-				</div>
-			{:else if post}
-				<div class="post-preview">
-					<h3><a href="/blog/{post.slug}" class="post-link" target="_blank">{post.title}</a></h3>
-
-					<div class="post-meta">
-						<span class="date">{post.date}</span>
-						<div class="tags-container">
-							{#if post.categories}
-								{#each post.categories as category (category)}
-									<a class="tag" href="/category/{category}" target="_blank">{category}</a>
-								{/each}
-							{/if}
-						</div>
-					</div>
+	{:else if post}
+		<a href="/blog/{post.slug}" class="post-link" target="_blank">{post.title}</a>
+		<div class="post-meta">
+			<span class="date">{post.date}</span>
+			{#if post.categories}
+				<div class="tags">
+					{#each post.categories as category (category)}
+						<a class="tag" href="/category/{category}" target="_blank">{category}</a>
+					{/each}
 				</div>
 			{/if}
 		</div>
+	{/if}
+</section>
 
-		<div class="cta-section">
-			<a href="/blog" class="cta-button" target="_blank">View All Posts</a>
-			<a href="/about" class="cta-button secondary" target="_blank">About This Mess</a>
-		</div>
-	</div>
-</div>
+<nav class="cta">
+	<a href="/blog" target="_blank">→ view all posts</a>
+	<a href="/about" target="_blank">→ about this mess</a>
+</nav>
 
 <style>
-	.hero-section {
-		min-height: 80vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 2rem 1rem;
+	.hero {
+		padding: 2rem 0 4rem;
 	}
-	.image-wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 4rem 0;
-		position: relative;
-	}
-	.image-wrapper button {
-		cursor: pointer;
-		transition: transform 0.3s ease;
-		border: 2px solid transparent;
-		background: none;
-		padding: 0.5rem;
-		position: relative;
-	}
-	img {
-		scale: 1.5;
+	.logo {
 		display: block;
+		padding: 0;
+		margin: 0 0 0.5rem;
+		background: none;
+		border: 0;
+		cursor: pointer;
 	}
-	.image-wrapper button.clicked {
+	.logo {
+		position: relative;
+	}
+	.wordmark {
+		display: flex;
+		font: inherit;
+		font-size: clamp(2.75rem, 12vw, 5rem);
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		line-height: 1;
+	}
+	.wordmark span {
+		display: inline-block;
+		transform: rotate(var(--tilt));
+		text-shadow: 0.05em 0.05em 0 var(--fg);
+	}
+	.logo:hover .wordmark span {
+		animation: bounce 0.6s ease-in-out calc(var(--i) * 0.05s);
+	}
+	.badge {
+		position: absolute;
+		top: -0.4rem;
+		right: -2.75rem;
+		padding: 0.1rem 0.4rem;
+		font: inherit;
+		font-size: 0.7rem;
+		font-weight: 700;
+		color: var(--bg);
+		background: var(--accent);
+		transform: rotate(12deg);
+	}
+	.logo.clicked {
 		animation: spin 1s ease-in-out;
 	}
 	.spin-counter {
-		margin-top: 1rem;
-		font-size: 0.9rem;
-		color: var(--pastelBlue);
-		font-weight: bold;
+		margin: 0 0 2.5rem;
+		font-size: 0.8rem;
+		color: var(--muted);
+		visibility: hidden;
 	}
-	.front-blurb {
-		max-width: min(40rem, 90vw);
-		margin: 2rem auto;
-		padding: 2.5rem;
-		text-align: left;
-		outline: 4px solid var(--black);
-		outline-offset: -2px;
-		box-shadow: 10px 10px var(--black);
-		background: var(--offWhite);
-		transition: box-shadow 0.5s ease-out;
+	.spin-counter.visible {
+		visibility: visible;
 	}
-	.front-blurb:hover {
-		box-shadow: 4px 4px 0 var(--black);
-	}
-	.status-bar {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		margin-bottom: 1.5rem;
-		padding-bottom: 1rem;
-		border-bottom: 2px solid var(--black);
-	}
-	.status-indicator {
-		width: 12px;
-		height: 12px;
-		background: red;
-		border-radius: 50%;
-		animation: blink 2s infinite;
-	}
-	@keyframes blink {
-		0%,
-		50% {
-			opacity: 1;
-		}
-		51%,
-		100% {
-			opacity: 0.3;
-		}
-	}
-	.error-text {
-		color: darkred;
-		margin: 0;
-		font-weight: 900;
+	.status {
+		margin: 0 0 0.75rem;
+		font-size: 0.8rem;
+		color: var(--accent);
 		text-transform: uppercase;
+		letter-spacing: 0.08em;
 	}
 	.tagline {
-		margin: 0 0 2rem 0;
-		color: var(--pastelBlue);
-		font-size: 1.1rem;
-	}
-
-	.tags-container {
-		display: flex;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-	}
-
-	.latest-post-section {
-		margin-bottom: 2rem;
-	}
-	.section-header {
-		margin-bottom: 1rem;
-
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-	.bracket {
-		color: var(--pastelRed);
-		font-weight: 900;
-	}
-	.error-box {
-		background: #ffe6e6;
-		border: 2px solid darkred;
-		padding: 1rem;
-		margin: 1rem 0;
-	}
-	.error-code {
-		font-size: 0.9rem;
-		color: #666;
-		margin: 0.5rem 0 0 0;
-	}
-	.post-preview {
-		border: 2px solid var(--black);
-		padding: 1.5rem;
-	}
-	.post-preview h3 {
-		padding: 0;
 		margin: 0;
+		font-size: clamp(1.4rem, 4.5vw, 2rem);
+		font-weight: 500;
+		font-style: italic;
+		max-width: 28ch;
+	}
+	.latest {
+		padding: 2rem 0;
+		border-top: 1px solid var(--rule);
+		border-bottom: 1px solid var(--rule);
 	}
 	.post-link {
-		color: var(--black);
+		display: inline-block;
+		font-size: 1.2rem;
+		font-weight: 700;
 		text-decoration: none;
-		font-weight: bold;
-		font-size: 1.5rem;
-		display: block;
-		margin-bottom: 1rem;
-		transition: color 0.2s ease;
-	}
-	.post-link:hover {
-		color: var(--pastelRed);
-		text-decoration: underline;
+		margin-bottom: 0.5rem;
 	}
 	.post-meta {
 		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		align-items: flex-start;
-	}
-	.cta-section {
-		display: flex;
-		gap: 1rem;
 		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.25rem 1.25rem;
 	}
-	.cta-button {
-		background: var(--black);
-		color: var(--offWhite);
-		padding: 0.75rem 1.5rem;
+	.cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 2rem;
+		padding-top: 2rem;
+	}
+	.cta a {
 		text-decoration: none;
-		font-weight: bold;
-		border: 2px solid var(--black);
-		transition: all 0.2s ease;
-		text-transform: uppercase;
-		font-size: 0.9rem;
+		color: var(--muted);
 	}
-	.cta-button:hover {
-		background: var(--offWhite);
-		color: var(--black);
-		box-shadow: 10px 10px 0 var(--black);
-		transform: translate(-5px, -5px);
+	.cta a:hover {
+		color: var(--accent);
 	}
-	.cta-button.secondary {
-		background: transparent;
-		color: var(--black);
-	}
-	.cta-button.secondary:hover {
-		background: var(--pastelYellow);
+	@keyframes bounce {
+		30% {
+			transform: translateY(-0.18em) rotate(calc(var(--tilt) * -2));
+		}
+		60% {
+			transform: translateY(0.04em) rotate(var(--tilt));
+		}
 	}
 	@keyframes spin {
-		from {
-			transform: rotate(0deg);
-		}
 		to {
 			transform: rotate(360deg);
-		}
-	}
-	@media (max-width: 768px) {
-		.image-wrapper {
-			padding-top: 4rem;
-		}
-
-		.hero-section {
-			min-height: 70vh;
-			padding: 1rem;
-		}
-
-		.front-blurb {
-			padding: 2rem;
-		}
-
-		.cta-section {
-			flex-direction: column;
-		}
-
-		.post-meta {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 0.5rem;
 		}
 	}
 </style>

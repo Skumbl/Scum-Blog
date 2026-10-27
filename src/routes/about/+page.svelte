@@ -67,7 +67,7 @@
 
 <section class="content">
 	<p>
-		<strong class="hello">hello ( ﾟ▽ﾟ)/</strong>
+		<strong class="hello">hello („• ֊ •„)੭</strong>
 		my name is Jan, but I've been going by Scumble online for the last 10 years so it's what I tend
 		to stick with. I'm a corporate developer by trade, but I love to code in my free time as well so
 		I made my own little corner of the internet.

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PostData } from '$lib/types/post';
+	import Comments from '$lib/components/Comments.svelte';
 	export let data: { post: PostData, headerImage: string | null };
 	const { title, date, Content } = data.post;
 	const headerImage: string | null = data.headerImage;
@@ -53,6 +54,8 @@
 	</div>
 
 	<p class="eof">-- EOF --</p>
+
+	<Comments slug={data.post.slug} />
 </article>
 
 <style>

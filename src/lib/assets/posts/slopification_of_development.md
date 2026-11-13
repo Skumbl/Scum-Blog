@@ -27,7 +27,7 @@ I DON'T CARE, STOP USING UP ALL THE WATER
 
 I also don't think that we should be licensing out our ability to code and work on open source software for the betterment of everyone from companies that clearly don't have the interests of us open source developers in mind.
 
-_"you will own nothing and you will be happy"_ marches on in America but now we will _know nothing and be happy_.
+_"you will own nothing and you will be happy"_ marches on in America but now we will _"know nothing and be happy"_.
 
 ### My actions do not match my beliefs
 I still use models at work because I am required to do so, but like many developers I take the skills I use from work and use them in my own personal projects. Is that an excuse? No, and I feel bad about it every time I do. I have this mental dissonance in my mind.

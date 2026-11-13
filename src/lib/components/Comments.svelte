@@ -46,7 +46,7 @@
 			<p class="muted">comments are napping right now. the post still works though.</p>
 		{:else}
 			{#if comments.length === 0}
-				<p class="muted">no comments yet. be the first bad developer here.</p>
+				<p class="muted">no comments yet. Be the first person the chime in.</p>
 			{/if}
 
 			{#each comments as comment (comment.id)}

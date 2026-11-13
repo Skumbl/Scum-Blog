@@ -78,7 +78,7 @@
 
 <nav class="cta">
 	<a href="/blog">→ view all posts</a>
-	<a href="/about">→ about this mess</a>
+	<a href="/about">→ what is this place</a>
 </nav>
 
 <style>

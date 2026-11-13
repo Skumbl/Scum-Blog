@@ -1,5 +1,5 @@
 ---
-title: The Slopification of Software Development - My thoughts on AI
+title: The Slopification of Software Development
 date: '2026-11-13'
 categories:
   - software development
@@ -7,6 +7,7 @@ categories:
   - opinion
 image: false
 ---
+## My thoughts on AI
 AI isn't going away, not in software development, not in day-to-day life, and to say otherwise is to put Pandora back in her box. Despite all the scams and slop and useless people peddling AI tools that do nothing more inconveniently, there is real technology here that is too useful. It has completely taken over the development world and it makes me quite sad.
 
 I've been really struggling with my inner thoughts about what it means to use AI in day-to-day development, and how I balance my own personal beliefs and convictions with a geAI isn't going away, not in software development, not in day-to-day life, and to say otherwise is to put Pandora back in her box. Despite all the scams and slop and useless people peddling AI tools that do nothing more inconveniently, there is real technology here that is too useful. It has completely taken over the development world and it makes me quite sad.

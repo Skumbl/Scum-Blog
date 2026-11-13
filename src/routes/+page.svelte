@@ -50,7 +50,7 @@
 	<p class="spin-counter" class:visible={spinCount > 0}>useless spin counter: {spinCount}</p>
 
 	<p class="status"><span class="dot"></span>perpetually 90% complete</p>
-	<h1 class="tagline">a blog written by and for bad developers.</h1>
+	<h1 class="tagline">I write Blog posts about things I build sometimes</h1>
 </section>
 
 <section class="latest">

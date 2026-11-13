@@ -18,7 +18,7 @@ I think my biggest gripe is that AI makes me stop thinking, I feel like I'm doin
 
 On principle on the current state of AI. I don't think models as they currently operate and are owned by private organizations are good. They are built on stolen data from humans that did not consent to having their data stolen. This is something that has always been important to me, I went out of my way for years to make sure that my data wasn't stolen from me without my express permission. The models themselves are quite good at software and other jobs given time and money, but I fear this ends justify the means mentality.
 
-There is also the not so hidden cost to society at the moment that we are all aware of. I don't think we should be building high power datacenters with little to no oversight because we need our coding models to have 2% lower error rate. I don't think we should have AI datacenters taking up a bunch of water
+There is also the not so hidden cost to society at the moment that we are all aware of. I don't think we should be building high power data centers with little to no oversight because we need our coding models to have 2% lower error rate. I don't think we should have AI data centers taking up a bunch of water
 
 "in reddit voice"  
 _but actually golf courses take up the same amount if not more water_  

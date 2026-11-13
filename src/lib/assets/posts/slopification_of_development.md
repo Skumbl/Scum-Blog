@@ -1,5 +1,5 @@
 ---
-title: The Slopification of Software Developement - My thoughts on AI
+title: The Slopification of Software Development - My thoughts on AI
 date: '2026-11-13'
 categories:
   - software development
